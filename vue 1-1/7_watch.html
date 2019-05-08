@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="js/vue.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sample">
+            <input type="text" v-model="firstName">
+            <hr>
+            <input type="text" v-model="lastName">
+            <hr>
+            <input type="text" v-model.lazy="promo">
+            <hr>
+            <h2>Hello, {{ fullName }}</h2>
+            <hr>
+            <button class="btn btn-success" @click="showText = !showText">
+                ToggleText
+            </button>
+            <hr>
+            <h3 v-show="showText">Your sale is {{ sale }}%</h3>
+            <hr>
+            <button class="btn btn-success" v-on:click="addNumber">Create</button>
+            <ul>
+                <li v-for="(number, index) in numbers" v-on:mouseenter="colorLi($event, index)" v-on:mouseleave="colorLi($event, index)">{{ index }} - {{ number }}</li>
+            </ul>
+            <hr>
+            <table class="table table-bordered">
+                <tr v-for="(value, key) in info">
+                    <td>{{ key }}</td>
+                    <td>{{ value }}</td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        function getSale(code, callback) {
+            let codes = {
+                newYear: 10,
+                some: 20
+            };
+
+            let sale = (codes[code] !== undefined) ? codes[code] : 0;
+
+            setTimeout(() => {
+                callback(sale);
+            }, 500);
+        }
+
+        let sample = new Vue({
+            el: '.sample',
+            data: {
+                firstName: '',
+                lastName: '',
+                promo: '',
+                showText: true,
+                sale: 0,
+                numbers: [],
+                info: {
+                    name: 'Yana',
+                    email: 'Y@mail.ru'
+                }
+            },
+            computed: {
+                fullName() {
+                    console.log('render fullname');
+                    return this.firstName + ' ' + this.lastName;
+                }
+            },
+            watch: {
+                promo() {
+                    getSale(this.promo, (sale) => {
+                        this.sale = sale;
+                    });
+                }
+            },
+            methods: {
+                addNumber() {
+                    this.numbers.push(Math.floor(Math.random() * 10));
+                    this.sortNumbers();
+                },
+                sortNumbers() {
+                    this.numbers.sort(function(a, b) {
+                        return a > b ? 1 : -1;
+                    })
+                },
+                colorLi(event, index) {
+                    let color = event.type === 'mouseenter' & (index & 1) ? 'red' : 'black'
+                    event.target.style.color = color;
+
+
+
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
