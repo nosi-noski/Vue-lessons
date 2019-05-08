@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="js/vue.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sample">
+            <div class="alert" v-bind:style="minHeight"> Some text</div>
+            <hr>
+            <table class="table tabe-bordered">
+                <tr v-for="(value, name) in properties">
+                    <td>{{ name }}</td>
+                    <td> <input type="text" v-model="properties[name]"></td>
+                </tr>
+            </table>
+            <button class="btn btn-primary" @click="height += 10">+ height</button> {{minHeight}}
+        </div>
+    </div>
+    <script>
+        let sample = new Vue({
+            el: '.sample',
+            data: {
+                properties: {
+                    color: 'red',
+                    backgroundColor: '#faa'
+                },
+                height: 0
+            },
+            computed: {
+                minHeight() {
+                    return 'min-height: ' + this.height + 'px';
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
