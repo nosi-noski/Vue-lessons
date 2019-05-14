@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <link rel="stylesheet" href="css//bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+    <style>
+        .content {
+            height: 300px;
+            overflow: auto;
+        }
+    </style>
+    <script src="js/vue.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sample">
+            <form @submit.prevent="toggleForm" v-if="!formSubmited">
+                <div class="content alert alert-info" v-on:scroll="checkScrollTop($event)">
+                    <p>This text no one reads. This text no one reads. This text no one reads.</p>
+                    <p>This text no one reads. This text no one reads. This text no one reads.</p>
+                    <p>This text no one reads. This text no one reads. This text no one reads.</p>
+                    <p>This text no one reads. This text no one reads. This text no one reads.</p>
+                    <p>This text no one reads. This text no one reads. This text no one reads.</p>
+                    <p>This text no one reads. This text no one reads. This text no one reads.</p>
+                    <p>This text no one reads. This text no one reads. This text no one reads.</p>
+                    <p>This text no one reads. This text no one reads. This text no one reads.</p>
+                    <p>This text no one reads. This text no one reads. This text no one reads.</p>
+                    <p>This text no one reads. This text no one reads. This text no one reads.</p>
+                    <p>This text no one reads. This text no one reads. This text no one reads.</p>
+                    <p>This text no one reads. This text no one reads. This text no one reads.</p>
+                    <p>This text no one reads. This text no one reads. This text no one reads.</p>
+                    <p>This text no one reads. This text no one reads. This text no one reads.</p>
+                    <p>This text no one reads. This text no one reads. This text no one reads.</p>
+                </div>
+
+                <div v-if="scrollTop">
+                    <div class="form-check">
+                        <label class="form-check-label">
+							<input class="form-check-input" type="checkbox" v-model="agreeCheckBox"> 
+							Agree<br>
+							<input class="form-check-input" type="checkbox" v-model="spamCheckBox"> 
+							Spam<br>
+						</label>
+                    </div>
+                    <div class="form-check" v-if="spamCheckBox">
+                        <input class="form-check-input" type="radio" checked value="Phone" v-model="spamType">
+                        <label class="form-check-label">Phone</label>
+                        <br>
+                        <input class="form-check-input" type="radio" value="Email" v-model="spamType">
+                        <label class="form-check-label">Email</label>
+                    </div>
+                    <br>
+                    <button class="btn btn-primary" v-if="agreeCheckBox" v-bind:click="toggleForm">
+						Send Data
+					</button>
+                </div>
+            </form>
+            <div v-else="!formSubmited">
+                <table class="table table-bordered">
+                    <tr>
+                        <td>Agree</td>
+                        <td>{{ agreeCheckBox }}</td>
+                    </tr>
+                    <tr>
+                        <td>Spam</td>
+                        <td>{{ spamCheckBox }}</td>
+                    </tr>
+                    <tr v-if="spamCheckBox">
+                        <td>Type</td>
+                        <td>{{spamType}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        let sample = new Vue({
+            el: '.sample',
+            data: {
+                scrollTop: false,
+                formSubmited: false,
+                agreeCheckBox: false,
+                spamCheckBox: false,
+                phone: false,
+                email: false,
+                spamType: 'Phone'
+            },
+            computed: {
+
+            },
+            methods: {
+                checkScrollTop(event) {
+
+                    let div = event.target;
+                    this.scrollTop = div.scrollTop + div.clientHeight >= div.scrollHeight ? true : false;
+                },
+                toggleForm() {
+                    this.formSubmited = !this.formSubmited;
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
