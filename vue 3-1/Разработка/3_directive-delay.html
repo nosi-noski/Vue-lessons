@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <link rel="stylesheet" href="css//bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="js/vue.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sample">
+            <form>
+                <h2>{{ clicks }}</h2>
+                <hr>
+                <button class="btn btn-success" v-ondelay:click.prevent="onClick">
+				Send
+			</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        Vue.directive('ondelay', {
+            bind(el, options) {
+
+                let callback = (e) => {
+                    if (options.modifiers.prevent) {
+                        e.preventDefault();
+                    }
+                    options.value.call(this, e);
+                };
+                console.log(options);
+                el.addEventListener(options.arg, callback)
+            }
+        });
+
+        new Vue({
+            el: '.sample',
+            data: {
+                clicks: 0
+            },
+            methods: {
+                onClick() {
+                    this.clicks++;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

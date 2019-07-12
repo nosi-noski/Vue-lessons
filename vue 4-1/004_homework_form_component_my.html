@@ -21,12 +21,9 @@
                     </div>
                 </div>
                 <div>
-                    <div class="form-group" v-for="(elem, index) in info">
-                        <label v-bind:class="'label-' + elem.name">{{ elem.name }}</label>
-                        <i v-bind:class="[{fa:true}, check[elem.name]]"></i>
-                        <input type="text" class="form-control" v-model="elem.value" @input="checkValue($event, elem)">
-                    </div>
+                    <app-input-component v-for="(elem, index) in info" :name="elem.name" :value="elem.value" :pattern="elem.pattern" :key="index" @componenteventchange="checkValue(elem, $event, index)">
 
+                    </app-input-component>
                 </div>
                 <button class="btn btn-primary" v-bind:disabled="disabledButton">
 					Send Data
@@ -43,6 +40,44 @@
         </div>
     </div>
     <script>
+        Vue.component('app-input-component', {
+            props: ['name', 'value', 'pattern'],
+            template: `
+                <div class="form-group" >
+                    <label>{{ name }}</label>
+                    <span class="fa" :class="calcClass" v-if="activated"></span>
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        :value="value" 
+                        @input="changevalue"
+                    >
+                </div>
+            `,
+            data() {
+                return {
+                    activated: this.value != ''
+                }
+            },
+            computed: {
+                calcClass() {
+
+                    return this.pattern.test(this.value) ? 'fa-check-circle text-success' : 'fa-exclamation-circle text-danger';
+                }
+
+            },
+            methods: {
+                changevalue(e) {
+                    debugger
+                    this.activated = true;
+                    this.$emit('componenteventchange', {
+                        value: e.target.value,
+                        valid: this.pattern.test(e.target.value)
+                    });
+                }
+            }
+        });
+
         let sample = new Vue({
             el: '.sample',
             data: {
@@ -81,29 +116,31 @@
                 formSubmited: false
 
             },
-            computed: {
-                calcProgress() {
-
-                    return 100 / this.info.length * this.fieldFulled;
-                },
-                disabledButton() {
-                    return this.calcProgress !== 100 ? true : false;
-                }
-            },
             methods: {
-                checkValue(e, elem) {
-
-                    let elemChecked = elem.value.length > 0 ? elem.pattern.test(elem.value) ? this.statuses.error : this.statuses.info : '';
+                checkValue(elem, data, index) {
+                    debugger
+                    this.info[index].value = data.value;
+                    let elemChecked = data.valid ? this.statuses.error : this.statuses.info;
                     this.check[elem.name] = elemChecked;
                     this.fieldFulled = 0;
                     for (a in this.check) {
                         this.check[a] === this.statuses.error ? this.fieldFulled++ : 'no'
                     }
+
                 },
                 toggleForm() {
                     this.formSubmited = !this.formSubmited;
                 }
 
+            },
+            computed: {
+
+                calcProgress() {
+                    return 100 / this.info.length * this.fieldFulled;
+                },
+                disabledButton() {
+                    return this.calcProgress !== 100 ? true : false;
+                }
             }
         });
     </script>
