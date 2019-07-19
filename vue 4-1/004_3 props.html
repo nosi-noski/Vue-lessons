@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <link rel="stylesheet" href="css//bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="js/vue.js"></script>
+</head>
+
+<body>
+    <div class="sample">
+        <app-some :abnumstring="'true'" v-bind:anumber="199" v-bind:brequired="2" :evalidator="10">
+        </app-some>
+    </div>
+    <script src="js/vue.js"></script>
+    <script>
+        Vue.component('app-some', {
+            props: {
+                anumber: {
+                    type: Number
+                },
+                abnumstring: [Number, String],
+                brequired: {
+                    type: Number,
+                    required: true
+                },
+                cdefault: {
+                    type: Number,
+                    default: 323
+                },
+                ddefault: {
+                    type: Object,
+                    default () {
+                        return {
+                            ddefault: 500
+                        }
+                    }
+                },
+                evalidator: {
+                    validator(value) {
+                        return value > 0 && value <= 10;
+                    }
+                }
+            },
+            template: `
+			<div>	
+				
+				<h2> {{ abnumstring }} </h2>
+				<hr>
+				<h2> {{ anumber }} </h2>
+				<hr>
+				<h2> {{ brequired }} </h2>
+				<hr>
+				<h2> {{ cdefault }} </h2>
+				<hr>
+				<h2> {{ ddefault }} </h2>
+				<hr>
+				<h2> {{ evalidator }} </h2>
+				<hr>
+			</div>	
+			`
+        });
+
+
+        new Vue({
+            el: '.sample'
+        });
+    </script>
+</body>
+
+</html>
