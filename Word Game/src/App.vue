@@ -1,22 +1,22 @@
 <template>
   <div class="wrapper">
     <div class="left-panel col-lg-5">
-      <wordgame 
+      <myword 
         :title="'Моё слово'"
         :myword="my.target.split('')" 
         :trywords="opponent.attempt"
         @componentinputnewownword="inputTargetWord( 'i try', $event)"
         @componentinputnewenemyword="inputAttemptWord( 'opponent try', $event)">
-      </wordgame>
+      </myword>
       </div>
     <div class="right-panel col-lg-5">
-      <wordgame
+      <opponentword
         :title="'Слово оппонента'" 
         :myword="opponent.target.split('')" 
         :trywords="my.attempt" 
         @componentinputnewownword="inputTargetWord( 'opponent try', $event)"
         @componentinputnewenemyword="inputAttemptWord( 'i try', $event)">
-      </wordgame>
+      </opponentword>
     </div>
  	<div class="alphabeth-panel col-lg-2">
 		<table border="1" width="auto">
@@ -44,29 +44,44 @@
 	</div>
 
     <!--button class="btn btn-primary" @click="showLog">showLog</button --> 
-	<table class="table table-bordered">
-	<tr>
-		<td class="table-bordered"><b>my word: </b> {{this.my.target}}</td>
-		<td class="table-bordered">opponent attempt:
-			<ul class="list-group">
-				<li class="list-group-item" v-for="elem in opponent.attempt">{{elem.value}}</li>
-			</ul>
-		</td>		
-	</tr>
-	<tr>
-		<td class="table-bordered"><b>opponent word: </b> {{this.opponent.target}}</td>
-		<td class="table-bordered">my attempt:
-			<ul class="list-group">
-				<li class="list-group-item" v-for="elem in my.attempt">{{elem.value}}</li>
-			</ul>
-		</td>
-	</tr>
-	</table>
+	<div>
+		<div class="bottom-left-panel col-lg-5">
+			<table class="table table-bordered" >
+				<tr class="">
+					<td class=""><b>My word: </b> {{this.my.target}}</td>
+				</tr>
+				<tr class="">
+					<td class="">Opponent attempts:
+						<ul class="list-group">
+							<li class="list-group-item" v-for="elem in opponent.attempt">{{elem.value}}</li>
+						</ul>
+					</td>	
+				</tr>
+			</table>
+		</div>
+		<div class="bottom-right-panel col-lg-5">
+			<table class="table table-bordered" >
+				<tr class="">
+					<td class=""><b>Opponent word: </b> {{this.opponent.target}}</td>	
+				</tr>
+				<tr class="">	
+					<td class="">My attempts:
+						<ul class="list-group">
+							<li class="list-group-item" v-for="elem in my.attempt">{{elem.value}}</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	
+	
   </div>
 </template>
 
 <script>
-import WordGame from './components/WordGame.vue';
+import MyWord from './components/MyWord.vue';
+import OpponentWord from './components/OpponentWord.vue';
 
 export default {
   data () {
@@ -107,13 +122,14 @@ export default {
 			mode && mode === 'opponent try' ? currentObj = this.opponent : false;
 		// Задаём введёную букву угадываемого слова
 		currentObj.target = d.word;
+		console.log(currentObj.target);
     },
 
     inputAttemptWord(mode, d){
 		// Получаем от компонента событие и data и обновляем свою data.opponent.attempt
 		let currAttempt = this.opponent.attempt[d.index];
 		currAttempt.value = d.word;
-
+		console.log(currAttempt.value);
 		// Обнуление массивов для повторного пересчёта совпадений в слове
 		
 		this.matchLetters(d.word, this.my.target, currAttempt);
@@ -127,16 +143,18 @@ export default {
 		
 		let attemptWordArr = attemptWord.split('');
 		let targetWordArr = targetWord.split('');
-
+		debugger;
         for (let i = 0; i < attemptWordArr.length; i++){
 			let letterIndex = targetWordArr.indexOf(attemptWordArr[i]);
-			letterIndex > 0 ? attemptObj.wordMatch[i] = i : false;
+			letterIndex != -1 ? attemptObj.wordMatch[i] = i : false;
 			letterIndex == i ? attemptObj.positionWordMatch[i] = i : false;
         }
+		console.log(attemptObj);
 	}
   },
   components: {
-    'wordgame': WordGame
+    'myword': MyWord,
+	'opponentword': OpponentWord
   }   
 }
 </script>

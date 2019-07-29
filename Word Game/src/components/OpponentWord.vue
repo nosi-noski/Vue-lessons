@@ -13,22 +13,18 @@
 		<tr v-for="(word, index) in trywords">
 			<td v-for="(letter, position) in word.value">      
 				<div>
-					<input maxlength="1" v-bind:class="highlight(index, position)" class="enemy-letter" @input="checkinputenemyword(index, position, $event)">
+					<input 	maxlength="1" 
+							class="enemy-letter" 
+							@input="checkinputenemyword(index, position, $event)">
 				</div>
 			</td>
 
-			<td><div><input maxlength="1" class="enemy-count-match" 
-						disabled="disabled" 
-						:value="calcWordMatch(index)">
-			</div></td>
+			<td><div><input maxlength="1" class="enemy-count-match"></div></td>
 
-			<td><div><input class="enemy-count-position-match" 
-						disabled="disabled" 
-						:value="calcPositionWordMatch(index)">
-			</div></td>
+			<td><div><input maxlength="1" class="enemy-count-position-match"></div></td>
 		</tr>
 		<tr>
-			<td colspan="2"><button class="btn btn-primary" @click="addEnemyWord">Add</button></td>
+			<td colspan="2"><button class="btn btn-primary" @click="addOpponentWord">Add</button></td>
 		</tr>
 		</body>
     </table> 
@@ -36,6 +32,7 @@
 </template>
 
 <script>
+
 
 export default {
   props:["myword", "trywords", "title"],
@@ -70,26 +67,11 @@ export default {
 			})
 		}
     },
-    addEnemyWord(){
+
+    addOpponentWord(){
       this.trywords.push({value:'     ', wordMatch:[], positionWordMatch: []});
     },
 
-    calcWordMatch(ind){
-      return Object.keys(this.trywords[ind].wordMatch).length;
-    },
-
-    calcPositionWordMatch(ind){
-      return Object.keys(this.trywords[ind].positionWordMatch).length;
-    },
-
-    highlight(ind, pos){
-		debugger;
-		let elemClass = '';
-		let word = this.trywords[ind];
-			elemClass = word.wordMatch[pos] ? 'match' : elemClass;
-			elemClass = word.positionWordMatch[pos] ?  'position-match' : elemClass;
-      return elemClass;
-    }
   },
   computed: {
     checkemptyownword(){
