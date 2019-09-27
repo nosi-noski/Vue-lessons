@@ -18,10 +18,12 @@
       </div>
       <div v-else>
       <table class="table table-bordered">
-          <tr v-for="(elem, index) in questions">
-              <td>{{ elem.title }}</td>
-              <td>{{ getResult(index) }}</td>
-          </tr>
+          <tbody>
+			<tr v-for="(elem, index) in questions">
+				<td>{{ elem.title }}</td>
+				<td>{{ getResult(index) }}</td>
+			</tr>
+		  </tbody>
       </table>
     </div>
     </div>

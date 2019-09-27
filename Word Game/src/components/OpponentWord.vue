@@ -18,10 +18,9 @@
 							@input="checkinputenemyword(index, position, $event)">
 				</div>
 			</td>
-
 			<td><div><input maxlength="1" class="enemy-count-match"></div></td>
-
 			<td><div><input maxlength="1" class="enemy-count-position-match"></div></td>
+			<td><button class="btn btn-success" @click="clearClass($event)">Clear</button></td>
 		</tr>
 		<tr>
 			<td colspan="2"><button class="btn btn-primary" @click="addOpponentWord">Add</button></td>
@@ -71,6 +70,20 @@ export default {
     addOpponentWord(){
       this.trywords.push({value:'     ', wordMatch:[], positionWordMatch: []});
     },
+	
+	clearClass($event){
+		let tr = $event.target.closest('tr');
+		let inputArr = tr.getElementsByClassName('enemy-letter');
+		for (let i = 0; i < inputArr.length; i++){
+			let className = inputArr[i].className 
+
+			inputArr[i].className = className.replace('position-match', '');
+			inputArr[i].className = className.replace('match', '');
+		}
+		
+		
+	
+	}
 
   },
   computed: {
@@ -85,10 +98,10 @@ export default {
 	.enemy-letter,
 	.enemy-count-match,
 	.enemy-count-position-match {
-		width: 50px;
+		width: 44px;
 		text-align: center;
 		border: 1px solid black;
-		padding: 10px;
+		padding: 5px;
 		font: 2em bold;
 		background-color: #d7d2d2;
 		margin: 3px 2px
@@ -116,4 +129,6 @@ export default {
 	.position-match{
 		background-color: #2ECC40;  
 	}
+	
+
 </style>

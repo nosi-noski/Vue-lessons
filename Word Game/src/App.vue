@@ -1,6 +1,6 @@
 <template>
-  <div class="wrapper">
-    <div class="left-panel col-lg-5">
+  <div class="wrapper col-lg-12">
+    <div class="left-panel col-lg-4">
       <myword 
         :title="'Моё слово'"
         :myword="my.target.split('')" 
@@ -9,7 +9,7 @@
         @componentinputnewenemyword="inputAttemptWord( 'opponent try', $event)">
       </myword>
       </div>
-    <div class="right-panel col-lg-5">
+    <div class="right-panel col-lg-4">
       <opponentword
         :title="'Слово оппонента'" 
         :myword="opponent.target.split('')" 
@@ -18,62 +18,64 @@
         @componentinputnewenemyword="inputAttemptWord( 'i try', $event)">
       </opponentword>
     </div>
- 	<div class="alphabeth-panel col-lg-2">
-		<table border="1" width="auto">
-		<tr>
-			<td v-for="(elem, index) in alphabeth" v-if="index <= 9">
-			{{elem}}
-			</td>
-		</tr>
-		<tr>
-			<td v-for="(elem, index) in alphabeth" v-if="index > 9 && index <= 19">
-			{{elem}}
-			</td>
-		</tr>
-		<tr>
-			<td v-for="(elem, index) in alphabeth" v-if="index > 19 && index <= 29">
-			{{elem}}
-			</td>
-		</tr>
-		<tr>
-			<td v-for="(elem, index) in alphabeth" v-if="index > 29 && index <= 32">
-			{{elem}}
-			</td>
-		</tr>
-		</table>
+ 	<div class="col-lg-4">
+		<div class="alphabeth-panel col-lg-12">
+			<table border="1" width="auto">
+			<tr>
+				<td v-for="(elem, index) in alphabeth" v-if="index <= 9">
+				{{elem}}
+				</td>
+			</tr>
+			<tr>
+				<td v-for="(elem, index) in alphabeth" v-if="index > 9 && index <= 19">
+				{{elem}}
+				</td>
+			</tr>
+			<tr>
+				<td v-for="(elem, index) in alphabeth" v-if="index > 19 && index <= 29">
+				{{elem}}
+				</td>
+			</tr>
+			<tr>
+				<td v-for="(elem, index) in alphabeth" v-if="index > 29 && index <= 32">
+				{{elem}}
+				</td>
+			</tr>
+			</table>
+		</div>
+		
+			<div class="bottom-left-panel col-lg-6">
+				<table class="" >
+					<tr class="">
+						<td class=""><b>My word: </b> {{this.my.target}}</td>
+					</tr>
+					<tr class="">
+						<td class=""><b>Opponent attempts: </b>
+							<ul class="list-group">
+								<li class="" v-for="elem in opponent.attempt">{{elem.value}}</li>
+							</ul>
+						</td>	
+					</tr>
+				</table>
+			</div>
+			<div class="bottom-right-panel col-lg-6">
+				<table class="" >
+					<tr class="">
+						<td class=""><b>Opponent word: </b> {{this.opponent.target}}</td>	
+					</tr>
+					<tr class="">	
+						<td class=""><b>My attempts: </b>
+							<ul class="list-group">
+								<li class="" v-for="elem in my.attempt">{{elem.value}}</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+			</div>
+		
 	</div>
-
     <!--button class="btn btn-primary" @click="showLog">showLog</button --> 
-	<div>
-		<div class="bottom-left-panel col-lg-5">
-			<table class="table table-bordered" >
-				<tr class="">
-					<td class=""><b>My word: </b> {{this.my.target}}</td>
-				</tr>
-				<tr class="">
-					<td class="">Opponent attempts:
-						<ul class="list-group">
-							<li class="list-group-item" v-for="elem in opponent.attempt">{{elem.value}}</li>
-						</ul>
-					</td>	
-				</tr>
-			</table>
-		</div>
-		<div class="bottom-right-panel col-lg-5">
-			<table class="table table-bordered" >
-				<tr class="">
-					<td class=""><b>Opponent word: </b> {{this.opponent.target}}</td>	
-				</tr>
-				<tr class="">	
-					<td class="">My attempts:
-						<ul class="list-group">
-							<li class="list-group-item" v-for="elem in my.attempt">{{elem.value}}</li>
-						</ul>
-					</td>
-				</tr>
-			</table>
-		</div>
-	</div>
+	
 	
 	
   </div>
@@ -165,4 +167,16 @@ export default {
     max-width: max-content;
     margin: 10px auto;
 }
+
+.left-panel,
+.right-panel,
+.bottom-left-panel,
+.bottom-right-panel,
+.alphabeth-panel {
+	border: 1px solid black;
+}
+.list-group {
+	 margin-left: 20px ;
+}
+
 </style>

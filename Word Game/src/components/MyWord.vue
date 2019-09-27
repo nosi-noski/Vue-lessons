@@ -103,10 +103,10 @@ export default {
 	.enemy-letter,
 	.enemy-count-match,
 	.enemy-count-position-match {
-		width: 50px;
+		width: 44px;
 		text-align: center;
 		border: 1px solid black;
-		padding: 10px;
+		padding: 5px;
 		font: 2em bold;
 		background-color: #d7d2d2;
 		margin: 3px 2px

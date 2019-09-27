@@ -1,8 +1,7 @@
 
 $(function () {
     $('.left-panel').on('keyup', 'input', function (event) {
-		//console.log(event.which);
-		debugger;
+;
 			if( event.which == 37 ){
 				$(this).closest('td').prev().find('input').focus();
 				event.preventDefault();
@@ -13,8 +12,7 @@ $(function () {
 		
 	});
 	$('.right-panel').on('keyup', 'input', function (event) {
-		console.log(event.which);
-		debugger;
+	
 			if( event.which == 37 ){
 				$(this).closest('td').prev().find('input').focus();
 				event.preventDefault();
@@ -26,19 +24,22 @@ $(function () {
 	}).on('dblclick', 'input', function(event){
 
 		let classStyle = '';
-		if( $(this).hasClass('match') ){
-			
-			$(this).removeClass('match');
-			classStyle = 'position-match'
+		if( $(this).hasClass('enemy-letter') ){
 
-		}else if( $(this).hasClass('position-match') ){
-			
-			$(this).removeClass('position-match');
-			
-		} else {
-			classStyle = 'match'
+			if( $(this).hasClass('match') ){
+				
+				$(this).removeClass('match');
+				classStyle = 'position-match'
+
+			}else if( $(this).hasClass('position-match') ){
+				
+				$(this).removeClass('position-match');
+				
+			} else {
+				classStyle = 'match'
+			}
+			$(this).addClass(classStyle);
 		}
-		$(this).addClass(classStyle);
 	});
 	
 });
