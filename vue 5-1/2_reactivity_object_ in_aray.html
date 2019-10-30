@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <link rel="stylesheet" href="css//bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="js/vue.js"></script>
+</head>
+<body>
+<div class="wrapper">
+<div class="sample">
+    <form>
+        <div class="form-group">
+            <label>Guests</label>
+            <input type="button" 
+                   class="btn btn-primary" 
+                   value="+"
+                   @click="addGuest"
+                   >
+        </div>
+        <div>
+            <div class="form-group" v-for="(guest, index) in guests" >
+                <label @dblclick="deleteGuest(index)">
+                    Guest {{ index + 1}}
+                </label>
+                <input type="text" class="form-control" @input="onInput(index, $event)">
+            </div>
+        </div>
+        <hr>
+        <button class="btn btn-success">Send Data</button>
+    </form>
+    <div>
+        <h2>All done!</h2>
+        <table class="table table-bordered">
+            <tr>
+                <td>Guests</td>
+                <td>
+                    <ul class="list-group">
+                        <li class="list-group-item" 
+                            v-for="(guest, index) in guests">
+                            {{ guest.name }}
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+</div>
+<script>
+    var a = new Vue({
+        el: '.sample',
+        data: {
+            formSubmited: false,
+            guests: [],
+            guestIterator: 0
+        },
+        computed: {
+            fullName(){
+                return this.firstName + ' ' + this.lastName;
+            }
+        },
+        methods: {
+            addGuest(){
+                this.guests.push({name: ''});
+            },
+            deleteGuest(id){
+                debugger
+                this.guests.slice(id, 1);
+            },
+            onInput(index, elem){
+                //this.$set(this.guests, index, elem.target.value);
+                this.guests[index].name = elem.target.value;
+               // console.log(this.guests);
+            }
+        }
+});
+
+</script>
+</body>
+</html>
