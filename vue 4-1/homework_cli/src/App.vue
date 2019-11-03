@@ -1,33 +1,38 @@
 <template>
   <div class="wrapper">
-      <div class="sample" v-if="!formSubmited">
-      <keep-alive>
-        <question 
-          :questionid= "questionid"
-          :type="questions[questionid].type"
-          :title="questions[questionid].title"
-          :testanswers="questions[questionid].answers"
-          @componentcheckinput="checkInputWasChecked($event)"
-          ></question>
-      </keep-alive>
-      <hr>
-      <button class="btn btn-primary" 
-              @click="changeQuestion(questionid)"
-              v-bind:disabled="disabledButton"
-              > Next </button>       
-      </div>
-      <div v-else>
-      <table class="table table-bordered">
-          <tbody>
-			<tr v-for="(elem, index) in questions">
-				<td>{{ elem.title }}</td>
-				<td>{{ getResult(index) }}</td>
-			</tr>
-		  </tbody>
-      </table>
-    </div>
-    </div>
-    
+      <transition name="swich" mode="out-in">
+        
+        <div class="sample" :key="questions[questionid].name" v-if="!formSubmited">
+          <keep-alive>
+            <question 
+              :questionid="questionid"
+              :type="questions[questionid].type"
+              :title="questions[questionid].title"
+              :testanswers="questions[questionid].answers"
+              @componentcheckinput="checkInputWasChecked($event)">
+            </question>
+          </keep-alive>
+          <hr>
+          <button class="btn btn-primary" 
+                  @click="changeQuestion(questionid)"
+                  v-bind:disabled="disabledButton"> 
+            Next 
+          </button>       
+        </div v-else>
+
+        <div key="result">
+          <table class="table table-bordered">
+              <tbody>
+                <tr v-for="(elem, index) in questions">
+                  <td>{{ elem.title }}</td>
+                  <td>{{ getResult(index) }}</td>
+                </tr>
+              </tbody>
+          </table>
+        </div>
+
+      </transition>   
+  </div>
 </template>
 
 <script>
@@ -44,6 +49,7 @@ export default {
         {
           type:'radio',
           title: 'Какой тег задаёт ссылку?',
+          name:'link tag',
           answers: [
             { name:'<a>', checked: false },
             { name:'<div>', checked: false },
@@ -54,6 +60,7 @@ export default {
         {
           type:'checkbox',
           title: 'Какие из этих тегов строчные?',
+          name:'string tag',
           answers: [
             { name:'<a>', checked: false },
             { name:'<div>', checked: false },
@@ -113,4 +120,38 @@ export default {
     max-width: 600px;
     margin: 10px auto;
 }
+    .swich-enter { 
+        
+    }
+
+    .swich-enter-active { 
+       animation: slideIn 0.5s;
+    }
+
+    .swich-enter-to { 
+        
+    }
+
+    .swich-leave { 
+        /* position: absolute; */
+
+    }
+
+    .swich-leave-active { 
+       animation: slideOut 0.5s;
+       
+    }
+
+    .swich-leave-to { 
+        /* position: absolute; */
+    }
+    
+    @keyframes slideIn{
+        from{ transform: translateX(100vw); }
+        to{ transform: translateX(0px); }
+    }
+    @keyframes slideOut{
+        from{ transform: translateX(0px); }
+        to{ transform: translateX(-100vw); }
+    }
 </style>
