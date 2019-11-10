@@ -2,7 +2,6 @@
     <div>
         <div>Count: {{cnt}}</div>
         <div>Total: {{total}}</div>
-    {{ cnt }}
     </div>
 </template>
 
