@@ -5,24 +5,27 @@
         <div class="alert alert-warning" v-if="empty">
            Your Cart is empty!
         </div>
-        <table class="table table-bordered table-hover" v-else>
-            <thead>
-                <tr>
-                    <th>Position</th>
-                    <th>Name</th>
-                    <th>Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr v-for="product in products">
-                    <td>{{product.id_product + 1}}</td>
-                    <td>{{product.title}}</td>
-                    <td>{{product.price}}</td>
-                </tr>
-            </tbody>
-            
-        </table>
-        
+        <template v-else>
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr :key="index" v-for="(product, index) in products">
+                        <td>{{product.id_product + 1}}</td>
+                        <td>{{product.tsitle}}</td>
+                        <td>{{product.price}}</td>
+                    </tr>
+                </tbody>
+                
+            </table>
+            <button class="btn btn-success"
+            @click="onOrder">Order Now</button>
+        </template>
     </div>
 </template>
 
@@ -46,6 +49,12 @@ export default {
         empty(){
             return this.products.length === 0;
         }
+    },
+    methods:{
+        onOrder(){
+            this.$router.push('/checkout');
+        }
+
     }
 }
 </script>
