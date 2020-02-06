@@ -6,14 +6,34 @@
             "price": 20000
         },
         {
-            "id_product": 2,
+            "id_product": 102,
             "title": "Phone 6",
             "price": 25000
         },
         {
-            "id_product": 3,
+            "id_product": 3000,
             "title": "Phone 7",
             "price": 30000
-        }  
+        },
+        {
+            "id_product": 3,
+            "title": "Redmi 3",
+            "price": 10000
+        },
+        {
+            "id_product": 750,
+            "title": "Redmi 4",
+            "price": 11000
+        },
+        {
+            "id_product": 1,
+            "title": "Redmi 5",
+            "price": 12000
+        },
+        {
+            "id_product": 2,
+            "title": "Redmi 6",
+            "price": 15000
+        }      
     ]
 }
