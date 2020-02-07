@@ -3,15 +3,16 @@
         <h1>Products</h1>
         <div class="row">
 
-            <div class="col col-sm-4"
+            <div class="col col-sm-4 product-pane"
                  :key="product.id_product"
                  v-for="product in products">
-                   
+				<div class="product-container">
+					   
                     <router-link tag="h3" :to="'/product/'+ product.id_product">
                         <a>{{ product.title }}</a>
                     </router-link>
                     
-                    <div>{{ product.price }}</div>
+                    <div>Price: {{ product.price }}</div>
                     <button 
                             v-if="inCart.indexOf(product.id_product) === -1"
                             class="btn btn-primary"
@@ -22,6 +23,7 @@
                             class="btn btn-warning"
                             @click="removeFromCart(product.id_product)">Remove from cart
                     </button>
+				</div>	
             </div>
         </div>
     </div>
@@ -33,7 +35,7 @@ import {mapActions} from 'vuex';
 
 export default {
     created(){
-    
+	
       this.$store.dispatch('products/loadItems');
     },
 
@@ -58,4 +60,14 @@ export default {
     .row{
         padding-left: 15px;
     }
+	.product-container {
+		border: 1px solid #ddd;
+		border-radius: 5px;
+		padding: 10px;
+		margin: 10px 0px 0px 10px;
+	}
+	.product-pane {
+		padding: 0px;
+		margin: 0px;
+	}
 </style>

@@ -25,14 +25,13 @@ export default{
             return getters.itemsMap[id];
         }
     },
-    mutaions:{
+    mutations:{
         loadItems(state, data){
-            console.log(data)
-            //state.items = data;
+            state.items = data.products;
 		}
     },
     actions:{
-        loadItems(store){
+        loadItems(store, data){
 			//store.commit('clearItems');
 
 			Vue.http.get('db')

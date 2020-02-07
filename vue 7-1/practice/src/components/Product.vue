@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div >
         <h1> {{ product.title }}</h1>
         <router-link :to="{name:'products'}">Back</router-link>   
         <hr>

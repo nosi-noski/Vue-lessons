@@ -10,16 +10,20 @@
                 <thead>
                     <tr>
                         <th>Position</th>
-                        <th>Name</th>
+                        <th>Title</th>
                         <th>Price</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr :key="index" v-for="(product, index) in products">
                         <td>{{product.id_product + 1}}</td>
-                        <td>{{product.tsitle}}</td>
+                        <td>{{product.title}}</td>
                         <td>{{product.price}}</td>
                     </tr>
+					<tr>
+						 <td  colspan="2"><div class="total-price-title">Total price:</div></td>
+						 <td > <div class="total-price-value"> {{ calcTotal }}</div>		</td>
+					</tr>
                 </tbody>
                 
             </table>
@@ -48,7 +52,20 @@ export default {
         },
         empty(){
             return this.products.length === 0;
-        }
+		},
+		calcTotal(){
+			
+			let total = 0;
+			
+			if( this.products.length > 0 ){
+				total = this.products.reduce( function(total, curr){
+					
+					return total + curr.price;
+				}, 0);
+				return total;
+			}
+			return total;
+		}
     },
     methods:{
         onOrder(){
@@ -58,3 +75,8 @@ export default {
     }
 }
 </script>
+<style>
+	.total-price-title{
+		float:right;
+	}
+</style>
