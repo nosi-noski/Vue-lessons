@@ -22,8 +22,10 @@ export default{
             let position = state.products.indexOf(id_product);
             if(position !== -1){
                 state.products.splice(position, 1);
-            }
-            
+            } 
+        },
+        removeAll(state) {   
+            state.products.length = 0;
         }
     },
     actions:{
@@ -32,6 +34,9 @@ export default{
         },
         remove( store, id_product ){
             store.commit('remove', id_product);
+        },
+        removeAll( store ){
+            store.commit('removeAll');
         }
     }
 }
