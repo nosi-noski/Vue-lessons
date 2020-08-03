@@ -1,0 +1,407 @@
+1
+00:00:00,420 --> 00:00:05,490
+For a user to be able to confirm their accounts we need to send him an email containing that email confirm
+
+2
+00:00:05,490 --> 00:00:10,740
+quote when they click on this link it automatically confirms their account.
+
+3
+00:00:10,770 --> 00:00:17,660
+The first thing we're going to do is install the package we are going to use to send emails called First
+
+4
+00:00:17,700 --> 00:00:23,340
+digest mail once this package is installed.
+
+5
+00:00:23,430 --> 00:00:29,680
+We can run MP X friend Lee mail in it.
+
+6
+00:00:29,680 --> 00:00:34,770
+And this is going to generate a configuration file at the root of application.
+
+7
+00:00:34,770 --> 00:00:40,070
+So this configuration file can help us configure the credentials useful sending emails.
+
+8
+00:00:40,210 --> 00:00:42,760
+First we can find a connection by default.
+
+9
+00:00:42,760 --> 00:00:44,030
+It's 70 B.
+
+10
+00:00:44,080 --> 00:00:48,340
+We can define the folder where all of our e-mails will be saved and by default.
+
+11
+00:00:48,370 --> 00:00:49,780
+It's just a Mills folder.
+
+12
+00:00:49,810 --> 00:00:56,580
+But what we want to do is actually save them in server slash mills so that the mills are on the server.
+
+13
+00:00:58,190 --> 00:00:59,900
+Then we have view engine.
+
+14
+00:00:59,900 --> 00:01:05,800
+In this case we are just going to default to handlebars and we can now define the credentials for a
+
+15
+00:01:05,800 --> 00:01:07,300
+70 B connection.
+
+16
+00:01:07,460 --> 00:01:13,610
+So it looks like we need an SMG port and SMG host a username and password.
+
+17
+00:01:13,610 --> 00:01:19,940
+Now you can use any service issue like you can use Park post you can use mill going you can use SS with
+
+18
+00:01:19,940 --> 00:01:24,300
+this package but in this case since we're in testing we are going to use mail truck.
+
+19
+00:01:24,450 --> 00:01:28,910
+And if you don't have a military account make sure you get one it's free.
+
+20
+00:01:28,910 --> 00:01:31,940
+This can help you send in those in development.
+
+21
+00:01:32,030 --> 00:01:33,960
+So this is my mail Trump account.
+
+22
+00:01:33,980 --> 00:01:39,120
+And when you log into your military account I'll just delete this inbox so I show you from scratch.
+
+23
+00:01:39,260 --> 00:01:42,930
+You can create a new inbox and pass in a name.
+
+24
+00:01:42,950 --> 00:01:46,560
+So I'll call this Melvin which is the name of our course.
+
+25
+00:01:46,700 --> 00:01:52,540
+And when I visit the inbox you can see credentials for that inbox present that you meet.
+
+26
+00:01:52,640 --> 00:01:55,060
+So notice the host is here.
+
+27
+00:01:55,160 --> 00:01:59,860
+The ports are here that we can use and the user name is provided also.
+
+28
+00:01:59,900 --> 00:02:08,420
+So we have to define these in our environment file so in the end the mail user name is going to be equal
+
+29
+00:02:08,420 --> 00:02:19,580
+to the value we copied form mail drop and we also have to define the mail password configuration so
+
+30
+00:02:19,580 --> 00:02:20,880
+I'll copy that from mail Trump.
+
+31
+00:02:20,900 --> 00:02:21,320
+Also
+
+32
+00:02:24,510 --> 00:02:31,370
+now remember we are not defining the host on port because these are already the defaults now that we
+
+33
+00:02:31,370 --> 00:02:40,160
+have that the next thing is for us to generate a mail so we can see n x friendly mail generate and the
+
+34
+00:02:40,160 --> 00:02:47,360
+name of these mail is going to be confirm accounts and it saves the mail has been generated successfully.
+
+35
+00:02:47,410 --> 00:02:55,320
+If we check in our server mails folder which is a form that we specified for our mails we have three
+
+36
+00:02:55,590 --> 00:02:56,700
+templates generated.
+
+37
+00:02:56,700 --> 00:03:02,940
+We have control account of HMO for still more parts of our mail than for text and then in case you want
+
+38
+00:03:02,940 --> 00:03:08,160
+to send for the Apple Watch You can also define how the email should look here.
+
+39
+00:03:08,310 --> 00:03:15,270
+Now in the confirmed HMO we are going to see hey I will pass in the name of the user who is trying to
+
+40
+00:03:15,270 --> 00:03:24,230
+activate the account so we can make this strong since this is HMO and we can have a break so that it
+
+41
+00:03:24,230 --> 00:03:35,180
+goes on the next line and we can say Please confirm your accounts by clicking on this your hour.
+
+42
+00:03:35,210 --> 00:03:36,580
+And we are going to pass in.
+
+43
+00:03:36,680 --> 00:03:37,370
+There you are.
+
+44
+00:03:37,610 --> 00:03:45,490
+But since this is HMO we can have an edge with and possibly you are right here now for text.
+
+45
+00:03:45,560 --> 00:03:49,000
+I'm going to copy this and pasted in text when it's text.
+
+46
+00:03:49,010 --> 00:03:52,990
+We can't have the strong tax so we're just going to have name.
+
+47
+00:03:53,000 --> 00:03:56,640
+We can't have the break and we can't have the ref.
+
+48
+00:03:56,660 --> 00:03:59,990
+So we're just going to have the link like that.
+
+49
+00:04:00,200 --> 00:04:04,020
+But what's important is that we make sure we pass the name under you all.
+
+50
+00:04:04,070 --> 00:04:06,870
+So how do we send an e-mail.
+
+51
+00:04:06,890 --> 00:04:14,580
+We are going to come to use our model and this is the pre safe for when they use ace about to be saved
+
+52
+00:04:14,580 --> 00:04:20,480
+through the database we have when you use a post safe when the user is already safe.
+
+53
+00:04:20,510 --> 00:04:21,600
+To the database.
+
+54
+00:04:21,680 --> 00:04:27,350
+So when they use a successfully registered we are going to send an e-mail to that user.
+
+55
+00:04:27,590 --> 00:04:30,020
+And how do we send an e-mail using this package.
+
+56
+00:04:30,020 --> 00:04:42,530
+We are going to import mail from full digest slash mail and all we need to do is return New Mail and
+
+57
+00:04:42,530 --> 00:04:50,750
+the name of the mail is confirm accounts and we have to define who we are sending that mail to this
+
+58
+00:04:50,750 --> 00:04:55,820
+is going to be this that e-mail and we can possibly use us names so that it's available in the mail
+
+59
+00:04:55,910 --> 00:05:06,210
+so we can see this dot name and we can set a subject for this e-mail which is going to please confirm
+
+60
+00:05:07,500 --> 00:05:15,290
+your account and we can send data to the template that we defined for the mail and in the template is
+
+61
+00:05:15,310 --> 00:05:18,650
+expecting a name which is going to be d dot name.
+
+62
+00:05:18,760 --> 00:05:24,910
+And it's also expecting a U R O which is an activation you are out for the user to click on and this
+
+63
+00:05:24,910 --> 00:05:28,580
+activation you O has to contain the e-mail confirmed.
+
+64
+00:05:28,610 --> 00:05:28,850
+OK.
+
+65
+00:05:29,110 --> 00:05:30,650
+So this is what we are going to do.
+
+66
+00:05:30,760 --> 00:05:40,120
+We are going to say this dot e-mail confirm called but it has to be off slash e-mails slash confirm.
+
+67
+00:05:40,240 --> 00:05:42,450
+Then the e-mail confirm code.
+
+68
+00:05:42,520 --> 00:05:47,290
+But we also have to make sure that we have the correct you are all for the application so that when
+
+69
+00:05:47,290 --> 00:05:52,120
+the user clicks it brings the user back to the application at the moment.
+
+70
+00:05:52,120 --> 00:05:57,430
+We are using look our host for three thousand but to make sure that if this value changes in the production
+
+71
+00:05:57,430 --> 00:05:59,430
+environment we are still going to be fine.
+
+72
+00:05:59,440 --> 00:06:01,010
+Would you find this in our config.
+
+73
+00:06:01,180 --> 00:06:03,830
+So here we are exporting database you.
+
+74
+00:06:03,910 --> 00:06:11,460
+We are going to export you now which is going to be processed that EMV not app on this call you are
+
+75
+00:06:11,470 --> 00:06:18,970
+0 or the default which is esta to be local host three thousand.
+
+76
+00:06:18,970 --> 00:06:23,700
+Now in our environment file we can define app your all
+
+77
+00:06:26,490 --> 00:06:29,390
+and this is going to be local hotspot three thousand.
+
+78
+00:06:29,420 --> 00:06:34,820
+So in I use our model to make sure our code is stable and does not change in future.
+
+79
+00:06:34,820 --> 00:06:44,020
+We're going to import config from config and let's make sure we have the config alias in our bubble
+
+80
+00:06:44,040 --> 00:06:47,400
+our c file yes we do.
+
+81
+00:06:47,750 --> 00:06:48,120
+OK.
+
+82
+00:06:48,330 --> 00:06:52,770
+So to send the mail we are also going to concatenate config that you are Oh right here.
+
+83
+00:06:53,700 --> 00:07:01,710
+So config that you are slash of e-mails confirm and then the e-mail confirm code.
+
+84
+00:07:01,890 --> 00:07:06,360
+And finally we are going to call it a send method to send the mail.
+
+85
+00:07:06,420 --> 00:07:12,930
+So after the user account is saved we are going to send the e-mail using this and this send method actually
+
+86
+00:07:12,930 --> 00:07:23,680
+returns a promise so we can make this sink and then use our weight here so that the user actually sees
+
+87
+00:07:23,680 --> 00:07:27,930
+the successful response only after the e-mail is sent.
+
+88
+00:07:27,930 --> 00:07:29,470
+Now let's try this out.
+
+89
+00:07:29,490 --> 00:07:36,030
+We need to come to our browser revisit the application and try to register a new user UN member we are
+
+90
+00:07:36,030 --> 00:07:38,610
+using M. trap which is going to trap the e mails.
+
+91
+00:07:38,610 --> 00:07:44,640
+It's not going to send any real e-mails so let's pass in the password for the user and click on sign
+
+92
+00:07:44,640 --> 00:07:49,070
+up and we can see that it takes a moment to complete the API request.
+
+93
+00:07:49,530 --> 00:07:51,680
+And now we have to 0 1 create it.
+
+94
+00:07:51,780 --> 00:07:58,980
+And if we check mail drop like that we have an e-mail sent since we defined to we have the name of the
+
+95
+00:07:58,980 --> 00:07:59,450
+user.
+
+96
+00:07:59,750 --> 00:08:02,250
+And we also have the e-mail of the user.
+
+97
+00:08:02,250 --> 00:08:08,550
+Then if we check out our esta M.O. We have Hey Dr. Strange please confirm your accounts by clicking
+
+98
+00:08:08,550 --> 00:08:09,120
+on this.
+
+99
+00:08:09,160 --> 00:08:17,070
+Oh and if we copy this you are oh you can see the confirmation code here is exactly the confirmation
+
+100
+00:08:17,070 --> 00:08:25,000
+code we have for this user so when the user clicks on this link he takes it a user to our client site
+
+101
+00:08:25,030 --> 00:08:31,550
+of the application and the user account is activated but we don't yet have these functionality set up.
+
+102
+00:08:31,660 --> 00:08:34,170
+We are going to set this up in adolescence.

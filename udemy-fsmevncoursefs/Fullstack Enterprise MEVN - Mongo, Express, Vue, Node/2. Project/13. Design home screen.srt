@@ -1,0 +1,555 @@
+1
+00:00:00,870 --> 00:00:06,580
+This is a template we are going to be following and we need to design this week to we CSX.
+
+2
+00:00:06,690 --> 00:00:08,700
+So let's get started now.
+
+3
+00:00:08,760 --> 00:00:12,380
+We are going to learn a lot about who wins SS in the process.
+
+4
+00:00:12,420 --> 00:00:21,070
+First let's talk about the call us if we go to the main that view and I give this a class of text to
+
+5
+00:00:21,320 --> 00:00:22,600
+you.
+
+6
+00:00:22,730 --> 00:00:25,050
+You can see that this becomes green.
+
+7
+00:00:25,100 --> 00:00:26,230
+Each color.
+
+8
+00:00:26,240 --> 00:00:32,490
+Now where is this color code to come in for and tell me the gems file.
+
+9
+00:00:33,920 --> 00:00:41,180
+It spots an object and in this object there is a class object and this defines all of the colors that
+
+10
+00:00:41,180 --> 00:00:43,720
+we are going to be using in our application.
+
+11
+00:00:43,760 --> 00:00:46,670
+So the team color is defined here.
+
+12
+00:00:46,940 --> 00:00:49,490
+We have to which is the one we are using.
+
+13
+00:00:49,490 --> 00:00:52,310
+And then we have different shapes of two.
+
+14
+00:00:52,400 --> 00:00:56,530
+So we have to light us to light and so on and so forth.
+
+15
+00:00:56,600 --> 00:01:04,400
+And then anytime we have the text we can attach the name of the color that we want to give to this element.
+
+16
+00:01:04,430 --> 00:01:12,550
+So we have text you we can have text read since we have the red color defined in our til we see SS config.
+
+17
+00:01:12,740 --> 00:01:16,580
+We can have text blue if we want.
+
+18
+00:01:16,670 --> 00:01:20,750
+In this case for our design we have a brown each color.
+
+19
+00:01:20,810 --> 00:01:27,650
+We have a good each color and for the buttons if we check out the other designs we have a greenish color.
+
+20
+00:01:28,130 --> 00:01:30,450
+So this is going to be available to you.
+
+21
+00:01:30,470 --> 00:01:34,870
+I'm just going to go to my two weeks yeses and paste these colors.
+
+22
+00:01:35,150 --> 00:01:38,700
+So we have em out which is the greenish color.
+
+23
+00:01:38,750 --> 00:01:44,120
+We have gold which is the gold color and Brown which is the brownish color.
+
+24
+00:01:44,180 --> 00:01:47,940
+So now we can use these custom colors in our application.
+
+25
+00:01:48,080 --> 00:01:54,710
+So for example we can see text gold and you can see we have that good color right there.
+
+26
+00:01:55,100 --> 00:01:59,420
+So now that we have our own custom color palette and the where you can actually get these.
+
+27
+00:01:59,460 --> 00:02:05,760
+OK so you can check the source code for this lesson and you just copy this palette that I pasted.
+
+28
+00:02:06,050 --> 00:02:07,820
+I prepared it beforehand.
+
+29
+00:02:07,820 --> 00:02:14,810
+Next thing we're going to take care of is the funds so funds that could come and we want to search for
+
+30
+00:02:14,910 --> 00:02:17,080
+merry weather.
+
+31
+00:02:17,360 --> 00:02:28,070
+So this is the funds when you add the funds customize it add a bold and other light and I'll copy the
+
+32
+00:02:28,070 --> 00:02:35,880
+import coming to my main dot CSX and paste the import there.
+
+33
+00:02:35,900 --> 00:02:41,830
+So now that I have the Merriweather forms I can come to my towing CSX and configure these funds.
+
+34
+00:02:42,200 --> 00:02:48,770
+So if you search for funds in this configuration file you can see that we have funds and then we have
+
+35
+00:02:48,770 --> 00:02:54,290
+the name of the funds and then the order in which this form sheet should be loaded so we can add our
+
+36
+00:02:54,320 --> 00:02:56,600
+own funds if we want.
+
+37
+00:02:56,730 --> 00:02:59,780
+We have signs we have Sunseri We have money.
+
+38
+00:03:00,010 --> 00:03:01,090
+Let's add our own.
+
+39
+00:03:01,110 --> 00:03:08,840
+This is going to be primary and this is going to be Merriweather at the top which means everyone wants
+
+40
+00:03:08,940 --> 00:03:09,850
+to buy my font.
+
+41
+00:03:09,870 --> 00:03:12,210
+We are going to give it a colossal font primary.
+
+42
+00:03:12,210 --> 00:03:23,110
+So let's try that funds primary and if I call now you can see that this has a font of primary which
+
+43
+00:03:23,110 --> 00:03:25,240
+is r Merryweather fonts.
+
+44
+00:03:25,290 --> 00:03:32,040
+So let's just make sure that all elements on the page have this font so goods our index that estimable
+
+45
+00:03:33,400 --> 00:03:37,930
+and add this to the body class of funds primary.
+
+46
+00:03:38,610 --> 00:03:38,890
+OK.
+
+47
+00:03:38,890 --> 00:03:39,480
+That works.
+
+48
+00:03:39,490 --> 00:03:41,000
+We have the font configured.
+
+49
+00:03:41,650 --> 00:03:44,700
+Let's start taking care of our layout.
+
+50
+00:03:44,850 --> 00:03:51,640
+Looks like we need a top bar with this gold ish color in our main that view.
+
+51
+00:03:51,840 --> 00:03:58,470
+I'm going to add a DPH with a class of etch to an edge to ease us.
+
+52
+00:03:58,500 --> 00:04:00,790
+She has a slide that takes care of the height.
+
+53
+00:04:00,810 --> 00:04:09,320
+So if you come through a chill wind at CSX and such for height you find out the high comments and you
+
+54
+00:04:09,320 --> 00:04:16,090
+can see we can have edge with the size of the height and edge too in this case is zero point five Ram.
+
+55
+00:04:16,190 --> 00:04:19,480
+So it's just like wait and see SS but it's pretty quick.
+
+56
+00:04:19,520 --> 00:04:22,660
+So now I have a class of etch 2.
+
+57
+00:04:22,700 --> 00:04:26,780
+I'm gonna give this a with of four which is a width of one hundred percent.
+
+58
+00:04:26,870 --> 00:04:38,580
+And again you can check out the till we say SS 5 4 with and you'd see we have we've of auto p x 1 and
+
+59
+00:04:38,580 --> 00:04:43,170
+the one I'm using right now is for y down here which is 100 percent.
+
+60
+00:04:43,560 --> 00:04:48,150
+So with W full which means means with 100 percent.
+
+61
+00:04:48,410 --> 00:04:52,190
+And then I'm just gonna say be off good.
+
+62
+00:04:52,320 --> 00:04:57,330
+And this means background color of good and you can see we have the go top border right there.
+
+63
+00:04:57,490 --> 00:05:02,040
+And I think this should be called light because it looks a little lighter.
+
+64
+00:05:02,070 --> 00:05:02,560
+OK.
+
+65
+00:05:02,580 --> 00:05:03,480
+So just like that.
+
+66
+00:05:03,510 --> 00:05:07,040
+That's our top model without waiting any line of CSX.
+
+67
+00:05:07,050 --> 00:05:08,680
+Really flexible.
+
+68
+00:05:08,730 --> 00:05:13,550
+Next we have this section that has the logo and the two buttons.
+
+69
+00:05:13,650 --> 00:05:21,410
+So we probably want to have a bar of four with a bit of padding on the edges.
+
+70
+00:05:21,450 --> 00:05:29,250
+So what we're going to do is have a diff class is going to be off with form.
+
+71
+00:05:29,790 --> 00:05:40,150
+The height is going to be of twelve we can check height to see what twelve is and two of his three room.
+
+72
+00:05:40,200 --> 00:05:45,290
+So we can play around with those values to make sure we have the correct one edge of twelve.
+
+73
+00:05:45,750 --> 00:05:49,980
+Let's just give this a border so that we can see what we are dealing with.
+
+74
+00:05:50,670 --> 00:05:56,630
+So butter gives us a bottle of one piece so solid and what I read gives is color of red.
+
+75
+00:05:56,700 --> 00:05:58,510
+So that's the border there.
+
+76
+00:05:58,530 --> 00:06:05,400
+So we can see the dimensions we are dealing with now to be able to control the items in this container.
+
+77
+00:06:05,400 --> 00:06:14,100
+I'll give this a display of flex and items center which means a line item center and justified content
+
+78
+00:06:14,100 --> 00:06:16,680
+center to just weigh the content center.
+
+79
+00:06:16,980 --> 00:06:22,410
+Then I'm going to have a def for the logo for.
+
+80
+00:06:22,500 --> 00:06:27,210
+So for start Jess in this case I'll just call it man.
+
+81
+00:06:27,570 --> 00:06:28,810
+MELVIN OK.
+
+82
+00:06:28,860 --> 00:06:34,530
+Because it's the Melvin stock and you can see it's justified center but we don't want to just fight
+
+83
+00:06:34,530 --> 00:06:40,770
+sent out what we want we actually just fight between so that we're going to have two days or two children
+
+84
+00:06:41,010 --> 00:06:45,390
+and they're going to be floated to each end of the Flex container.
+
+85
+00:06:45,720 --> 00:06:50,640
+So I'm going to add another child and in here we're going to have a navigation links.
+
+86
+00:06:50,670 --> 00:06:56,020
+So I'll just cut out the Walton links that we have here and it here and great.
+
+87
+00:06:56,070 --> 00:07:00,930
+So you can see we have a fiber content between walking perfectly.
+
+88
+00:07:00,990 --> 00:07:02,290
+We have never.
+
+89
+00:07:02,370 --> 00:07:04,230
+And then we have the logging register.
+
+90
+00:07:04,230 --> 00:07:10,400
+It looks like this container actually has a very large putty just like in the styling here.
+
+91
+00:07:10,420 --> 00:07:11,760
+So let's add that buddy.
+
+92
+00:07:12,780 --> 00:07:18,130
+So let's give this a padding ex of twelve and maybe 12 is a lot.
+
+93
+00:07:18,130 --> 00:07:22,580
+Let's try six and six looks great.
+
+94
+00:07:22,620 --> 00:07:26,540
+So putting X which means horizontal padding of six.
+
+95
+00:07:26,580 --> 00:07:30,880
+Now it looks like the color of the logo should actually be good.
+
+96
+00:07:30,900 --> 00:07:36,050
+So we are going to say text gold and great.
+
+97
+00:07:36,330 --> 00:07:40,620
+Now the color of the logging unregistered buttons are actually brown.
+
+98
+00:07:40,680 --> 00:07:46,680
+So we are going to make sure this is text brown and gray.
+
+99
+00:07:46,680 --> 00:07:48,240
+That looks fine.
+
+100
+00:07:48,240 --> 00:07:53,740
+I would give the same class to the register and we also do not want it to be underlined.
+
+101
+00:07:53,760 --> 00:07:57,240
+So we'll give this a class of no on the line.
+
+102
+00:07:57,270 --> 00:07:59,380
+Make sure we give this the same class.
+
+103
+00:08:00,180 --> 00:08:07,520
+And we probably want to change this to sign in and change these to join now just like it is in our template.
+
+104
+00:08:08,920 --> 00:08:13,290
+Now the register button actually has a border.
+
+105
+00:08:13,360 --> 00:08:22,150
+So let's give this a border and we we're also going to give this a border broad so that the border isn't
+
+106
+00:08:22,150 --> 00:08:22,560
+Brown.
+
+107
+00:08:22,570 --> 00:08:29,320
+Just like in the template but the border here looks so thin and in the template it looks thicker.
+
+108
+00:08:29,440 --> 00:08:32,920
+So we'll give this a mother of two and I think that's good.
+
+109
+00:08:32,950 --> 00:08:34,630
+Now it also has a potty.
+
+110
+00:08:34,840 --> 00:08:39,330
+So we're going to see p. five and that's a little too much.
+
+111
+00:08:39,330 --> 00:08:47,880
+So let's try P. of two and I think that's a K. maybe try P. of one and I think that's perfect.
+
+112
+00:08:47,880 --> 00:08:54,010
+So now that we have the putting the next thing is to make it round so we're going to see round it and
+
+113
+00:08:54,010 --> 00:08:56,950
+this guess is of small but outrageous.
+
+114
+00:08:56,980 --> 00:09:02,950
+We're going to give it one that fool for a complete butter reduce and I think that's great.
+
+115
+00:09:02,950 --> 00:09:12,250
+Now let's get rid of the body red since we had done in the element and now we need to give a little
+
+116
+00:09:12,250 --> 00:09:15,250
+space between the joint now and the signing.
+
+117
+00:09:15,250 --> 00:09:24,680
+So we are going to come to the signing of the joint now and give this a margin left of three and great.
+
+118
+00:09:24,720 --> 00:09:26,370
+That's the speech we need it.
+
+119
+00:09:26,370 --> 00:09:36,420
+Finally we need to make sure the text right here for start Jess Mearns Stata is centralized so we have
+
+120
+00:09:36,420 --> 00:09:45,630
+to actually come to the home page which is here and make sure we add that text we don't yet have a home
+
+121
+00:09:45,630 --> 00:09:46,620
+component.
+
+122
+00:09:46,920 --> 00:09:48,570
+So let's create one.
+
+123
+00:09:48,570 --> 00:09:56,970
+So at home the view and in the wilds I'm going to import home
+
+124
+00:10:00,180 --> 00:10:04,610
+from Page's home that view and add that Welch
+
+125
+00:10:10,490 --> 00:10:17,170
+and in the home we define our template on Def OK.
+
+126
+00:10:17,230 --> 00:10:18,670
+So the home looks good.
+
+127
+00:10:18,730 --> 00:10:22,450
+Now let's give this an etch one of Texas Center.
+
+128
+00:10:22,990 --> 00:10:30,330
+So X on the text center the text Brown.
+
+129
+00:10:31,450 --> 00:10:34,790
+And this is going to see an easy end.
+
+130
+00:10:35,020 --> 00:10:35,470
+Great.
+
+131
+00:10:35,650 --> 00:10:40,360
+But now we also need some spacing from the top.
+
+132
+00:10:40,360 --> 00:10:52,390
+So let's give this a glass of margin y 32 and this is of margin top and bottom of 32 units.
+
+133
+00:10:52,570 --> 00:10:59,320
+So if you want to make sure or know what to do two stands for you can concerto in such for margin and
+
+134
+00:10:59,320 --> 00:11:03,830
+then check out the 32 value you can see that that's 8 REM.
+
+135
+00:11:03,940 --> 00:11:04,420
+Okay.
+
+136
+00:11:04,900 --> 00:11:07,870
+So that's it using Tobin's yeses.
+
+137
+00:11:07,900 --> 00:11:14,000
+It's a really really easy process to design exactly what we need.
+
+138
+00:11:14,020 --> 00:11:15,910
+So thank you so much.
+
+139
+00:11:15,910 --> 00:11:19,140
+And then the next lesson will continue having fun with these projects.

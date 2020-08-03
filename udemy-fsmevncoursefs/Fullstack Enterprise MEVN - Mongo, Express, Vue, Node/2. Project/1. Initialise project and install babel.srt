@@ -1,0 +1,191 @@
+1
+00:00:01,040 --> 00:00:06,650
+The first step to starting a full spectroscopy project is to generate a package that Jason for NPM.
+
+2
+00:00:06,650 --> 00:00:11,780
+In each dash why this automatically skips all questions.
+
+3
+00:00:11,850 --> 00:00:19,410
+The next step is for us to install Express which is our backend server npm install safe.
+
+4
+00:00:19,800 --> 00:00:20,400
+EXPRESS
+
+5
+00:00:24,550 --> 00:00:32,060
+next year I'm going to do is create a get ignore file so that we can make sure unnecessary folders and
+
+6
+00:00:32,060 --> 00:00:37,100
+files are not pushed to get hot going to ignore the non modules and the puckish log.
+
+7
+00:00:37,110 --> 00:00:44,320
+The Jason File next I'll create a server folder where all of our server code is going to live.
+
+8
+00:00:44,450 --> 00:00:49,960
+Now create an indexed or just file you need which is I wrote in here going to require express
+
+9
+00:00:54,110 --> 00:01:01,950
+create a new express instance my calling express as a function and we can listen or create a server.
+
+10
+00:01:02,850 --> 00:01:07,620
+My calendar listen function.
+
+11
+00:01:07,840 --> 00:01:13,330
+We need to pass in the port as a first argument and the second argument is a function that will be executed
+
+12
+00:01:13,330 --> 00:01:15,610
+once our server has successfully started.
+
+13
+00:01:15,670 --> 00:01:19,500
+In this case I'm just going to log server started
+
+14
+00:01:22,230 --> 00:01:23,280
+to execute this far.
+
+15
+00:01:23,310 --> 00:01:28,930
+We can run node server slash index and you can see we have servers not that because expressed server
+
+16
+00:01:28,930 --> 00:01:31,070
+was successfully started at the moment.
+
+17
+00:01:31,070 --> 00:01:36,840
+If we make any changes to this file we would have to stop our server and started again before we see
+
+18
+00:01:36,840 --> 00:01:37,730
+those changes.
+
+19
+00:01:37,800 --> 00:01:46,090
+But we are going to install a tool code load month so we don't have to do this npm install save us a
+
+20
+00:01:46,090 --> 00:01:48,960
+dependency for development Node 1
+
+21
+00:01:56,760 --> 00:02:03,730
+now that we have no money stored no packets should use and file our create a script and this script
+
+22
+00:02:03,730 --> 00:02:04,630
+is going to be called
+
+23
+00:02:07,710 --> 00:02:17,720
+this script is going to unload on server slash index and if we want NPM 1 def you can see we have server
+
+24
+00:02:17,730 --> 00:02:26,150
+started now load money is going to automatically restart every time we make a change.
+
+25
+00:02:26,360 --> 00:02:32,010
+The next step is for us to be able to use the ESD import syntax instead of the require.
+
+26
+00:02:32,030 --> 00:02:39,080
+This is going to really keep our code very clean and things are clean site all so uses the ASX require
+
+27
+00:02:39,380 --> 00:02:42,060
+the server side should also use it for uniformity.
+
+28
+00:02:42,410 --> 00:02:49,230
+To do this we are going to install a couple of bubble packages and then install save.
+
+29
+00:02:49,230 --> 00:02:55,060
+Def the first one is going to be bubble core and this is the core bubble package.
+
+30
+00:02:55,060 --> 00:03:01,450
+The second one is going to be bubble slash CLIA which we are going to use to transpire that yes 6 quote
+
+31
+00:03:01,530 --> 00:03:08,930
+down to yes five so that we can run in production the next one is bubble slash preset EMV.
+
+32
+00:03:09,010 --> 00:03:14,320
+So that bubble can detect what specific version of JavaScript we are using and compile down to the correct
+
+33
+00:03:14,320 --> 00:03:24,400
+one last one is bubble node which is the package we are going to use along side note Hmong in development
+
+34
+00:03:28,900 --> 00:03:33,640
+now that those packages saying start the first thing we are going to do is modify our normal script.
+
+35
+00:03:33,670 --> 00:03:42,220
+I'm going to add exact bubble note and instead of using old look money is going to use my note so that
+
+36
+00:03:42,220 --> 00:03:46,790
+it transpires down to yes 5 before executing the code.
+
+37
+00:03:46,870 --> 00:03:49,650
+The next thing we're going to do is create a dot bubble.
+
+38
+00:03:49,660 --> 00:03:57,120
+Our CFO and inhere we are going to define a preset and the preset is going to be bubbles slash preset
+
+39
+00:03:57,360 --> 00:03:57,980
+Ian.
+
+40
+00:03:58,270 --> 00:04:02,530
+So that bubble automatically detects what version of Jaws we are using.
+
+41
+00:04:02,680 --> 00:04:11,530
+Now if we come to our call we can change this to import Express from Express and now let's go ahead
+
+42
+00:04:11,530 --> 00:04:20,530
+on one NPM one def to see if mobile is able to transfer our code and pin on Def and we have an error
+
+43
+00:04:20,530 --> 00:04:21,930
+that space express is not defined.
+
+44
+00:04:21,940 --> 00:04:24,440
+That's because we change data capital.
+
+45
+00:04:24,580 --> 00:04:25,050
+Great.
+
+46
+00:04:25,060 --> 00:04:30,900
+You can see that look monies successfully able to run could be the iOS 6 import syntax.
+
+47
+00:04:30,910 --> 00:04:37,410
+Now that we have both sets of we successfully sets our bubble and installed express let us continue
+
+48
+00:04:37,960 --> 00:04:38,750
+in the next lesson.

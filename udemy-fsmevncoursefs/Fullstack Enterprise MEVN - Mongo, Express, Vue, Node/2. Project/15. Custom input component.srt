@@ -1,0 +1,163 @@
+1
+00:00:00,540 --> 00:00:07,850
+Let's create a custom impute component so that we can reuse components across different pages.
+
+2
+00:00:07,890 --> 00:00:12,920
+First thing we're going to do is create a components folder here.
+
+3
+00:00:12,960 --> 00:00:15,470
+I'm going to create text input.
+
+4
+00:00:15,480 --> 00:00:25,590
+That view sees this as a component that will be used by most pages which are the index that jazz import
+
+5
+00:00:25,620 --> 00:00:26,490
+text input
+
+6
+00:00:32,070 --> 00:00:35,390
+and register it as a global view component here.
+
+7
+00:00:35,630 --> 00:00:42,090
+The component text input text input.
+
+8
+00:00:42,210 --> 00:00:45,340
+Why do we have an alias for the components folder.
+
+9
+00:00:45,810 --> 00:00:48,720
+So I'll add one component
+
+10
+00:00:51,390 --> 00:00:59,700
+points to the client slash components folder the next step is to extract her input from the register
+
+11
+00:00:59,700 --> 00:01:03,760
+since that's where we designed it and actually put it in the text input.
+
+12
+00:01:04,300 --> 00:01:10,510
+So I'll take the input copy one of them and place it there.
+
+13
+00:01:11,630 --> 00:01:13,370
+We'll accept some props.
+
+14
+00:01:13,460 --> 00:01:15,940
+So our defined script.
+
+15
+00:01:16,830 --> 00:01:18,680
+Export default an object
+
+16
+00:01:21,390 --> 00:01:29,150
+would accept a place holder of type String required.
+
+17
+00:01:29,170 --> 00:01:44,420
+True we'll also accept a type of type String required of falls and defaults to text.
+
+18
+00:01:44,420 --> 00:01:50,580
+Now how do we use the text input in the register component instead of having this input.
+
+19
+00:01:50,750 --> 00:01:54,260
+We can have text compute
+
+20
+00:01:57,630 --> 00:02:08,320
+and pass into props we need for example the place holder is going to be and SA you name where we need
+
+21
+00:02:08,320 --> 00:02:12,730
+to bind the value of the prop in the component.
+
+22
+00:02:12,730 --> 00:02:18,670
+So instead of having enter your name here we are going to bind it to place holder which is an incoming
+
+23
+00:02:18,770 --> 00:02:28,240
+crop and now in our register if we change these two names we can see it reflected in the register.
+
+24
+00:02:28,650 --> 00:02:29,880
+I'll do final scripts
+
+25
+00:02:34,440 --> 00:02:37,140
+and I'll define the dates for these components
+
+26
+00:02:39,850 --> 00:02:48,720
+I would have a model and here would have a name would also have an email and would also have a password.
+
+27
+00:02:48,920 --> 00:02:54,340
+And this actually represents the data that we are going to be collecting for my user.
+
+28
+00:02:54,350 --> 00:03:03,680
+So I would say the model is a quality model that name and if I open up my view death dos search for
+
+29
+00:03:03,680 --> 00:03:14,150
+the register component and check out the model sites I realize that it doesn't show up automatically
+
+30
+00:03:14,540 --> 00:03:23,300
+because this is a custom regex component for each walk we need to pass down the value which is going
+
+31
+00:03:23,300 --> 00:03:35,990
+to be model that name into this component and we're going to receive the value prop of type String required
+
+32
+00:03:36,830 --> 00:03:43,990
+false and defaults to an empty string and we are going to mind it to the input
+
+33
+00:03:46,670 --> 00:03:52,460
+so we are successfully binding the value but now we need to meet on events every time this input in
+
+34
+00:03:52,460 --> 00:04:03,020
+this component changes so we are going to see that image is going to be quality image to impeach events
+
+35
+00:04:03,260 --> 00:04:07,290
+with event that I get not value.
+
+36
+00:04:07,320 --> 00:04:17,610
+And now if we check out the register component monitor each model as we change the name you can see
+
+37
+00:04:17,610 --> 00:04:20,450
+the name automatically reflected.
+
+38
+00:04:20,520 --> 00:04:23,790
+Now let's do the same thing for the email and the password
+
+39
+00:04:33,310 --> 00:04:38,480
+and we can eliminate the other two inboxes we have.
+
+40
+00:04:38,480 --> 00:04:47,880
+So if we check register component and I type the name populates type the email it populates the type
+
+41
+00:04:47,880 --> 00:04:53,360
+the password it populates which means we have a successful custom VHS component.

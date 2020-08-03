@@ -1,0 +1,271 @@
+1
+00:00:00,510 --> 00:00:03,640
+Hello and welcome to this lesson.
+
+2
+00:00:03,810 --> 00:00:05,690
+I am going to show you the project.
+
+3
+00:00:05,700 --> 00:00:08,060
+We will be building in this course.
+
+4
+00:00:08,100 --> 00:00:15,750
+Now we are going to we are going to focus all of our energy on the complete authentication system.
+
+5
+00:00:15,750 --> 00:00:21,990
+It might look small but there is a lot that goes into building the perfect authentication system taking
+
+6
+00:00:21,990 --> 00:00:26,450
+care of security taking care of performance and all of that good stuff.
+
+7
+00:00:26,460 --> 00:00:28,880
+So first of all a user can read you stop.
+
+8
+00:00:28,980 --> 00:00:34,230
+So I'm going to place in my name and if I try to sign up without providing the details.
+
+9
+00:00:34,230 --> 00:00:44,000
+Of course we have some really clean validation I can place in my email and I can choose a password when
+
+10
+00:00:44,000 --> 00:00:44,800
+I sign up.
+
+11
+00:00:44,810 --> 00:00:50,060
+It takes a second because it sends a welcome email to the user.
+
+12
+00:00:50,270 --> 00:00:55,610
+Now if I check my email which is right here now we are also going to integrate e-mailing so that we
+
+13
+00:00:55,610 --> 00:00:59,210
+can send e-mails from anywhere in the application.
+
+14
+00:00:59,210 --> 00:01:05,610
+The system we are going to be setting up is scalable such that any time you can switch out for mail
+
+15
+00:01:05,620 --> 00:01:13,250
+trap mail gong or Amazon yes or Spock or whatever provider you actually want to use.
+
+16
+00:01:13,250 --> 00:01:20,150
+Now if I check the confirmation email I have a link that says please click here to confirm your account.
+
+17
+00:01:20,150 --> 00:01:25,610
+Now I can click on this link to confirm my account but if I visit my account I can actually see that
+
+18
+00:01:25,610 --> 00:01:31,610
+once my account is not confirmed I have a bar at the top that says Click here to reset e-mail.
+
+19
+00:01:31,640 --> 00:01:37,670
+And if I click on that link I have a confirmation that they successfully re sent email and notice the
+
+20
+00:01:37,670 --> 00:01:39,500
+flash messages that we have.
+
+21
+00:01:39,500 --> 00:01:45,370
+We are using view X to have a performance and really fast flash messaging system.
+
+22
+00:01:45,380 --> 00:01:48,430
+Now if I go back to my meal you can see that I have another e-mail.
+
+23
+00:01:48,530 --> 00:01:53,180
+Now if I click on this link it automatically tells me your e-mail has been confirmed.
+
+24
+00:01:53,180 --> 00:01:55,260
+Again we are using flash messages.
+
+25
+00:01:55,400 --> 00:01:56,380
+Now I can log out.
+
+26
+00:01:56,390 --> 00:01:59,960
+We have to log out functionality and we have a flash message.
+
+27
+00:01:59,960 --> 00:02:08,630
+Now if I click on signing and I forget my password I can go ahead and request for a password reset.
+
+28
+00:02:08,630 --> 00:02:14,000
+Now if I place in an e-mail that does not exist we have an error that sees this user does not exist
+
+29
+00:02:14,030 --> 00:02:16,150
+because we have clean error handling.
+
+30
+00:02:16,180 --> 00:02:21,650
+Now if I click on this we have password resettling set.
+
+31
+00:02:21,710 --> 00:02:23,770
+It expires in five minutes.
+
+32
+00:02:23,840 --> 00:02:27,710
+So we make sure that this is the correct use of request in the password reset.
+
+33
+00:02:27,740 --> 00:02:30,100
+So we make it expire in five minutes.
+
+34
+00:02:30,110 --> 00:02:37,710
+Now I'm going to copy this link instead of clicking on it and paste it here and I'm going to change
+
+35
+00:02:37,710 --> 00:02:39,300
+the token for the password reset.
+
+36
+00:02:39,330 --> 00:02:42,630
+As you can see we have a randomly secured generator token.
+
+37
+00:02:42,720 --> 00:02:49,410
+So if the token is invalid and I pass in a password to reset my password you can see we have an invalid
+
+38
+00:02:49,440 --> 00:02:50,460
+reset token.
+
+39
+00:02:50,730 --> 00:02:56,970
+But if I click here and now we are using the correct token and they pass in a new password and I click
+
+40
+00:02:56,970 --> 00:03:01,540
+on reset password we have successfully reset password flash message right there.
+
+41
+00:03:01,560 --> 00:03:03,240
+So this is really clean.
+
+42
+00:03:03,240 --> 00:03:08,960
+We also have the signing functionality where the user can pass in the email and password
+
+43
+00:03:12,880 --> 00:03:16,360
+we have this credentials do not match our records if the password is wrong.
+
+44
+00:03:16,380 --> 00:03:20,330
+And we also have cited for the use to successfully signing.
+
+45
+00:03:20,340 --> 00:03:20,970
+All right.
+
+46
+00:03:21,160 --> 00:03:23,920
+So this is what we are going to be building in a nutshell.
+
+47
+00:03:23,920 --> 00:03:31,820
+But the code base is gigantic because there is a lot that goes into building a real world consumer ready
+
+48
+00:03:31,880 --> 00:03:32,840
+application.
+
+49
+00:03:32,840 --> 00:03:37,380
+So in a server I'm going to teach you how to structure your application for scalability.
+
+50
+00:03:37,400 --> 00:03:40,700
+You can see that e-mails are stored in a specific folder.
+
+51
+00:03:40,700 --> 00:03:45,150
+The e-mails are in a similar text and watch a CMO for months.
+
+52
+00:03:45,200 --> 00:03:50,240
+You realize that we have a model folder for all of the models we have in the application and all of
+
+53
+00:03:50,240 --> 00:03:54,860
+our models have cleanly structured way of organizing their methods.
+
+54
+00:03:54,860 --> 00:03:56,610
+We also have our rules.
+
+55
+00:03:56,630 --> 00:03:59,910
+We have application World version for the API.
+
+56
+00:03:59,990 --> 00:04:02,560
+We have really clean imports right here.
+
+57
+00:04:02,570 --> 00:04:05,330
+We have a really good structure for the client.
+
+58
+00:04:05,330 --> 00:04:07,430
+Also we have components we have.
+
+59
+00:04:07,430 --> 00:04:08,120
+Makes sense.
+
+60
+00:04:08,120 --> 00:04:09,410
+We have pages.
+
+61
+00:04:09,470 --> 00:04:13,010
+We have the view XTO organized into modules.
+
+62
+00:04:13,040 --> 00:04:16,210
+We have the stars organized into a separate folder.
+
+63
+00:04:16,220 --> 00:04:23,480
+We have each use and help our exhaust functions create at a log goes into building this and it's going
+
+64
+00:04:23,480 --> 00:04:30,830
+to give you an opportunity to learn how to build a really scalable clean full stop javascript project
+
+65
+00:04:30,830 --> 00:04:35,750
+with Express and view Jess does a lot.
+
+66
+00:04:35,780 --> 00:04:37,430
+So we have the validation.
+
+67
+00:04:37,430 --> 00:04:39,830
+I'm going to be teaching you all of this.
+
+68
+00:04:39,860 --> 00:04:44,360
+So thank you for watching and see you in the next lesson.

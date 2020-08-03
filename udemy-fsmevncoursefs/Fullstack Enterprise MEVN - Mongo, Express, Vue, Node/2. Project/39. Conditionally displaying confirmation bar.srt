@@ -1,0 +1,319 @@
+1
+00:00:00,360 --> 00:00:06,360
+When trying to send a confirmation email we have a 400 but requests because they use ice not authenticate
+
+2
+00:00:06,360 --> 00:00:09,970
+it for us to authenticate all requests for the user.
+
+3
+00:00:09,990 --> 00:00:12,070
+We are going to have an egg use intercept.
+
+4
+00:00:12,780 --> 00:00:17,930
+Let's go to our issues exudes largesse and we are not going to export to an instance.
+
+5
+00:00:17,940 --> 00:00:23,990
+We are going to save the instance as is yours and we're going to export it.
+
+6
+00:00:24,000 --> 00:00:28,930
+Then we're going to have excuse that intercept US DoD request.
+
+7
+00:00:28,970 --> 00:00:35,480
+So we are intercepting all requests that use and will pass in a function that is going to be called
+
+8
+00:00:35,590 --> 00:00:37,830
+every time we make a request.
+
+9
+00:00:37,970 --> 00:00:44,460
+Here we are when you receive the agents config and we can modify these config and return a new version.
+
+10
+00:00:44,540 --> 00:00:47,690
+First we want to make sure we always return the config.
+
+11
+00:00:48,620 --> 00:00:52,230
+Secondly we want to know if the user is authenticate.
+
+12
+00:00:52,370 --> 00:00:57,830
+If they use sites authenticated we will get the to conform the view store and Apache to this request
+
+13
+00:00:58,250 --> 00:01:04,640
+as the header that our server is expecting first to get the store they're going to import stuff from
+
+14
+00:01:06,070 --> 00:01:15,170
+store and to check if the user's authenticated with which you see store that off the user and have a
+
+15
+00:01:15,170 --> 00:01:18,320
+streak boolean and to enforce the check.
+
+16
+00:01:18,320 --> 00:01:23,500
+We can also see and store that off the token.
+
+17
+00:01:23,500 --> 00:01:30,830
+Then we are going to set config that had us to be equal to assess on the score.
+
+18
+00:01:30,840 --> 00:01:36,770
+Chicken we are going to set the authenticates and use us token.
+
+19
+00:01:36,770 --> 00:01:39,490
+So this is going to be store that state.
+
+20
+00:01:39,560 --> 00:01:45,120
+And this is actually supposed to be states right because we want to get the state of the store so startled
+
+21
+00:01:45,140 --> 00:01:46,200
+state not off.
+
+22
+00:01:46,280 --> 00:01:54,200
+So when you say store that state that off that took it and if the user is not authenticated it's not
+
+23
+00:01:54,200 --> 00:01:56,540
+going to modify the head us just going to return it.
+
+24
+00:01:56,930 --> 00:01:58,080
+So that's it.
+
+25
+00:01:58,130 --> 00:02:01,970
+Now let's try to confirm the user's email again.
+
+26
+00:02:02,660 --> 00:02:11,520
+If I click on this reset to have a bad request so let's check to see if that took in was sent so you
+
+27
+00:02:11,520 --> 00:02:16,140
+can see the assets token was added to the request by agents.
+
+28
+00:02:16,170 --> 00:02:20,320
+Now let's verify exactly why we still have one authenticated.
+
+29
+00:02:20,460 --> 00:02:25,280
+We are going to go to mid away and to debug this in the catch.
+
+30
+00:02:25,320 --> 00:02:28,210
+We are going to console that love the error
+
+31
+00:02:31,300 --> 00:02:36,670
+open up launch serve our warning make the site request again.
+
+32
+00:02:36,890 --> 00:02:38,540
+And now we have the 400.
+
+33
+00:02:38,570 --> 00:02:46,970
+If we check our API to see the error we have secret a public key must be provided and that's coming
+
+34
+00:02:46,970 --> 00:02:48,800
+from Jason Webb.
+
+35
+00:02:49,340 --> 00:02:57,350
+Which means there's something wrong with a public key so let's check out the middleware and see what
+
+36
+00:02:57,350 --> 00:02:58,340
+we were passing in.
+
+37
+00:02:58,340 --> 00:03:01,130
+So we are passing in config to JWT.
+
+38
+00:03:01,130 --> 00:03:11,060
+Now let's check our config and we actually called JWT secret and get a blue cheese on undefined.
+
+39
+00:03:11,100 --> 00:03:15,150
+That's why Jason Webb token is telling us we must provide the secret key.
+
+40
+00:03:15,810 --> 00:03:24,420
+OK so let's let our server refresh and now if we make the request again we have e-mail confirmed sense
+
+41
+00:03:24,420 --> 00:03:30,380
+coming from our server but that was really fast and I think that's because this user is already confirmed.
+
+42
+00:03:30,690 --> 00:03:34,380
+Let's see if this use ice confirmed in the view store.
+
+43
+00:03:34,380 --> 00:03:38,500
+Check out the user's data the user has only been confirmed.
+
+44
+00:03:38,510 --> 00:03:41,590
+So let's try this with a user that has not been confirmed.
+
+45
+00:03:42,090 --> 00:03:45,050
+So I'm going to register with a new user
+
+46
+00:03:50,230 --> 00:03:55,090
+sign up this user successfully locked in with this user.
+
+47
+00:03:55,260 --> 00:03:58,280
+But we've not confirmed this User's Accounts.
+
+48
+00:03:58,410 --> 00:04:03,540
+If we take a little trap that's they use us accounts Nick.
+
+49
+00:04:03,600 --> 00:04:06,090
+Now let's click on recent e-mail.
+
+50
+00:04:06,180 --> 00:04:07,480
+You can see it takes a while.
+
+51
+00:04:07,590 --> 00:04:11,900
+It's spending and now we have a successful response.
+
+52
+00:04:11,900 --> 00:04:17,080
+And if we check out again you can see a new e-mail confirmation link has been sent to this user.
+
+53
+00:04:17,660 --> 00:04:25,920
+OK finally let's confront the User's Accounts and now the user's account is confirmed.
+
+54
+00:04:26,190 --> 00:04:30,300
+Let's check out the unique start to see the user's data.
+
+55
+00:04:30,300 --> 00:04:33,830
+If we load our stage you can see that e-mail confirm it is not.
+
+56
+00:04:33,840 --> 00:04:39,460
+Which means this user has been confirmed but we still see this bar.
+
+57
+00:04:39,490 --> 00:04:42,400
+So we need to restrict when this bar is showing.
+
+58
+00:04:42,400 --> 00:04:44,500
+If we look up we can see through the bar.
+
+59
+00:04:44,800 --> 00:04:50,410
+So this bar will only be there if the user is locked in and the user has not confirmed yet e-mail.
+
+60
+00:04:50,410 --> 00:04:57,820
+So the first thing we're going to do is we're going to go to mix in for off and find a new computer
+
+61
+00:04:57,850 --> 00:05:10,160
+property called confirmed and this is going to return this that store that stage that cost the user
+
+62
+00:05:10,640 --> 00:05:14,020
+the e-mail confirmed at.
+
+63
+00:05:14,500 --> 00:05:18,770
+And we can cast it to a fossil bullion.
+
+64
+00:05:18,770 --> 00:05:22,790
+So confirmed if this value is true then it's going to give us true.
+
+65
+00:05:22,890 --> 00:05:26,250
+But if these values undefined and you give us false OK.
+
+66
+00:05:26,460 --> 00:05:36,090
+So now in pages mean the view file we can have a V on this element so we can have the F off which means
+
+67
+00:05:36,120 --> 00:05:38,850
+only show up if the user is authenticated.
+
+68
+00:05:39,060 --> 00:05:40,730
+And now the user it's not authenticated.
+
+69
+00:05:40,740 --> 00:05:42,430
+So we can't see it.
+
+70
+00:05:42,450 --> 00:05:43,470
+Next we would log in
+
+71
+00:05:47,280 --> 00:05:54,690
+and now the user is locked in and we can still see the bar but this user is authenticated and verified.
+
+72
+00:05:54,910 --> 00:06:00,150
+What we're going to do is add another check and not confirmed.
+
+73
+00:06:00,200 --> 00:06:04,130
+So if you use eyes locked in and not confirmed then we will truly spot.
+
+74
+00:06:04,440 --> 00:06:09,580
+And now we can see that the bar is gone because this user is locked in and confirmed.
+
+75
+00:06:09,710 --> 00:06:18,990
+Now let's log out would sign up with a new user that is not confirmed sign up and now we can see the
+
+76
+00:06:18,990 --> 00:06:23,990
+bar why Deb because the user has not confirmed the account.
+
+77
+00:06:24,000 --> 00:06:28,460
+Now let's check a little drop click on this to confirm the user's account.
+
+78
+00:06:28,680 --> 00:06:34,970
+And as soon as they use ice confirmed the reduction of refreshes and you can see that the bar is gone.
+
+79
+00:06:35,040 --> 00:06:36,460
+This is really reactive.
+
+80
+00:06:36,480 --> 00:06:37,200
+And it's also.

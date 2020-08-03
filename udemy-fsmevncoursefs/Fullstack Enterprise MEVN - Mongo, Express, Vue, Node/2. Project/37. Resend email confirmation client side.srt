@@ -1,0 +1,231 @@
+1
+00:00:00,240 --> 00:00:05,220
+Every good application should have such a confirmation box when the user has not confirmed your email.
+
+2
+00:00:05,610 --> 00:00:09,900
+Let's build our own so that the user can confirm your emails by clicking on this link.
+
+3
+00:00:09,900 --> 00:00:11,980
+So first we need to start this.
+
+4
+00:00:12,000 --> 00:00:16,260
+We are going to go to the main view and looking at this.
+
+5
+00:00:16,380 --> 00:00:23,520
+It's directly above the bar we have which is this and it looks like the text is centralized.
+
+6
+00:00:23,520 --> 00:00:25,490
+It has a whiff of fool.
+
+7
+00:00:25,500 --> 00:00:32,250
+It spans the whole container and has a little height on the text essentially aligned vertically and
+
+8
+00:00:32,250 --> 00:00:33,230
+horizontally.
+
+9
+00:00:33,270 --> 00:00:44,890
+So let's try that before this would have a diff with a full with a height of about 12 the text is going
+
+10
+00:00:44,890 --> 00:00:46,010
+to be brown.
+
+11
+00:00:46,120 --> 00:00:54,360
+The background is going to be good light test and the display is going to be flex.
+
+12
+00:00:54,390 --> 00:00:57,210
+The items are going to be sense centered
+
+13
+00:00:59,800 --> 00:01:03,040
+fiscally and justify center.
+
+14
+00:01:03,070 --> 00:01:05,440
+Now would you place in our text
+
+15
+00:01:08,130 --> 00:01:10,490
+please confirm your account.
+
+16
+00:01:12,690 --> 00:01:15,160
+And it looks like we're getting there.
+
+17
+00:01:15,180 --> 00:01:17,870
+The last thing we need is a link so the user can click on.
+
+18
+00:01:18,000 --> 00:01:19,300
+Let's look at the design.
+
+19
+00:01:19,470 --> 00:01:25,700
+It looks like it's just a text with an on the line so we probably can fix that.
+
+20
+00:01:25,710 --> 00:01:28,110
+Let's try this first.
+
+21
+00:01:28,110 --> 00:01:33,830
+I just wanted to type out all of the text and this part which is supposed to be on the line.
+
+22
+00:01:33,840 --> 00:01:45,740
+I'm going to give it the spawn and I'll give it a class on border and murder but on Brown and if we
+
+23
+00:01:45,740 --> 00:01:48,870
+look at that it's not the best.
+
+24
+00:01:48,950 --> 00:01:57,620
+Probably want to give this mother too and maybe Mother button too so that the motor I is only on the
+
+25
+00:01:57,620 --> 00:02:05,810
+bottom and maybe give this a margin left of two now that color is not very visible.
+
+26
+00:02:05,810 --> 00:02:13,940
+Let's try the brown darkest student and change and I think that's because we are defining bottom on
+
+27
+00:02:13,940 --> 00:02:15,090
+the color.
+
+28
+00:02:15,170 --> 00:02:16,150
+That's not needed.
+
+29
+00:02:16,230 --> 00:02:23,110
+So let's try with Von great so we have please confirm your email address and receive an email.
+
+30
+00:02:23,110 --> 00:02:26,480
+Click here to send email.
+
+31
+00:02:26,590 --> 00:02:33,570
+Now that we have the design let's give this across all pointer so that each more user friendly friendly.
+
+32
+00:02:33,610 --> 00:02:36,430
+Now if I hover right I have a pointer.
+
+33
+00:02:36,430 --> 00:02:38,720
+You can go ahead and give it some more styling.
+
+34
+00:02:38,800 --> 00:02:48,490
+Like on hole var the text should be brown dark est and when we hope VI you can see the text changing
+
+35
+00:02:50,060 --> 00:02:51,630
+on clique of this.
+
+36
+00:02:51,910 --> 00:03:01,900
+So I'm going to give a click what we want is to re send e-mail confirm we can define this method in
+
+37
+00:03:01,900 --> 00:03:03,220
+this mean or the view.
+
+38
+00:03:03,250 --> 00:03:05,080
+But I like to keep it clean.
+
+39
+00:03:05,080 --> 00:03:12,670
+I'll go to the off mixing and also define a new method they're called Reset IMO confirm for this we
+
+40
+00:03:12,670 --> 00:03:20,440
+are going to require a new action so I'm going to define an action called post re send email confirm
+
+41
+00:03:22,100 --> 00:03:25,780
+good to the actions and define it there.
+
+42
+00:03:25,930 --> 00:03:27,340
+First we have to export it
+
+43
+00:03:32,840 --> 00:03:34,940
+and next we have to define the matching action
+
+44
+00:03:38,320 --> 00:03:41,730
+or receive context and data.
+
+45
+00:03:41,780 --> 00:03:50,100
+So this is going to be client post to the off emails we send.
+
+46
+00:03:50,210 --> 00:03:51,410
+I will pass the data.
+
+47
+00:03:52,840 --> 00:03:53,350
+OK.
+
+48
+00:03:53,360 --> 00:03:59,240
+At the moment we are just passing data but as we did this summer side you're going to see we don't actually
+
+49
+00:03:59,240 --> 00:04:00,430
+require this.
+
+50
+00:04:00,440 --> 00:04:04,520
+First let's go to the mixing and make sure we dispatch this.
+
+51
+00:04:04,520 --> 00:04:11,550
+So this that stall the dispatch post we sent send email confirm an NDA.
+
+52
+00:04:11,570 --> 00:04:18,500
+Then we can redirect the user to the homepage and when there's an error they're still going to be X
+
+53
+00:04:19,130 --> 00:04:19,480
+to use.
+
+54
+00:04:19,480 --> 00:04:21,250
+That's the homepage.
+
+55
+00:04:21,260 --> 00:04:25,910
+The reason why we have a dot then until catches because we are going to be flushing different messages
+
+56
+00:04:26,110 --> 00:04:28,320
+and we want to put them in separate blocks.
+
+57
+00:04:28,340 --> 00:04:34,640
+OK so this is the setup for sending the e-mail confirmed for this user in the next lesson.
+
+58
+00:04:34,640 --> 00:04:38,090
+We are going to set up the server side to receive this request.

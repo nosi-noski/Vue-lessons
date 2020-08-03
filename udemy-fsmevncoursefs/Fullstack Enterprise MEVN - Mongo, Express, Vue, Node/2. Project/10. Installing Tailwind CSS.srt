@@ -1,0 +1,187 @@
+1
+00:00:01,940 --> 00:00:07,330
+That's in store till when CSX reaches the CSX from what we are going to be using for this project.
+
+2
+00:00:07,340 --> 00:00:12,530
+If you've never used to before it's really really easy to use and you're going to have an opportunity
+
+3
+00:00:12,530 --> 00:00:16,320
+to learn the most amazing CSX framework on the planet.
+
+4
+00:00:16,340 --> 00:00:21,320
+The first thing we need to do is install a couple of dependencies.
+
+5
+00:00:21,620 --> 00:00:27,870
+First we'll be installing two having CSX itself but we'll also need to install post CSX which is which
+
+6
+00:00:27,870 --> 00:00:32,900
+will help us compare advanced CSX to what most bosses can understand.
+
+7
+00:00:32,900 --> 00:00:39,860
+We'll also need to install post CSX loader so he can help load that advance CSX with Westpac.
+
+8
+00:00:40,130 --> 00:00:41,720
+And I think that's all we need.
+
+9
+00:00:43,970 --> 00:00:54,830
+Next we are going to generate a tail CSX configuration file by running and p x to win in it and this
+
+10
+00:00:54,830 --> 00:00:56,150
+initialize the tool window.
+
+11
+00:00:56,150 --> 00:01:04,480
+Jess we see here next we're going to have a configuration for post CSX so CSX can feed the Jets.
+
+12
+00:01:04,640 --> 00:01:12,650
+And here we're going to have a module that exports and it's going to have a plugins ins and one of them
+
+13
+00:01:13,030 --> 00:01:24,380
+is going to be require showing CSX and will pass in showing that Jess has a config.
+
+14
+00:01:24,380 --> 00:01:28,310
+Now don't worry so much about CSX and all of the configurations.
+
+15
+00:01:28,490 --> 00:01:35,690
+What you need to know is this is a configuration for loading CSX and we need to register till we plug
+
+16
+00:01:35,730 --> 00:01:41,000
+it so that CSX is going to know exactly what configurations to use.
+
+17
+00:01:41,000 --> 00:01:47,290
+And we also have to add the post CSX loadout to our weapon configuration so that you can compare than
+
+18
+00:01:47,300 --> 00:01:49,310
+that advanced JavaScript we talked about.
+
+19
+00:01:49,820 --> 00:01:54,630
+So how are CSX loader.
+
+20
+00:01:55,070 --> 00:02:00,450
+Now the final step is to be able to use Tobin says sensors in our own CSX.
+
+21
+00:02:00,530 --> 00:02:03,920
+So in our client stars mean CSX.
+
+22
+00:02:04,010 --> 00:02:05,860
+When you use the towing CSX.
+
+23
+00:02:05,870 --> 00:02:13,320
+So we in pre-flight to lean components.
+
+24
+00:02:13,970 --> 00:02:25,160
+And finally till we utilities and this is different CSX packages coming from the till we package itself.
+
+25
+00:02:25,250 --> 00:02:32,120
+So because we have the tailwind plugging this directive is available to us and CSX knows how to handle
+
+26
+00:02:32,120 --> 00:02:35,030
+this company down to normal CSX.
+
+27
+00:02:35,090 --> 00:02:40,020
+So now that we have this if we check out the application it's to run in normally.
+
+28
+00:02:40,130 --> 00:02:48,990
+So if we refresh and view the beach source and view the update CSX look at that we have normal isotopes
+
+29
+00:02:49,020 --> 00:02:49,600
+yeses.
+
+30
+00:02:49,640 --> 00:02:50,820
+And this is coming from.
+
+31
+00:02:50,840 --> 00:02:59,330
+So when pre-flight we have a bunch of each meeting classes a lot of CSX and this is coming from the
+
+32
+00:02:59,330 --> 00:03:01,280
+CSX framework we just installed.
+
+33
+00:03:01,750 --> 00:03:02,140
+OK.
+
+34
+00:03:02,180 --> 00:03:05,670
+So how is this going to work to win helps us right.
+
+35
+00:03:05,680 --> 00:03:09,570
+Flexible CSX using utility classes.
+
+36
+00:03:09,660 --> 00:03:18,350
+And this is how it's going to work in the main the view we can give this element a class of text center.
+
+37
+00:03:18,380 --> 00:03:26,090
+This is text align center text seal which is color of teal and if I refresh.
+
+38
+00:03:26,330 --> 00:03:26,620
+Great.
+
+39
+00:03:26,630 --> 00:03:31,640
+You can see it's centralized and we have a color of teal and the awesome part about this framework is
+
+40
+00:03:31,640 --> 00:03:36,890
+the fact that every census we write is exactly the same way we would have written it if we were writing
+
+41
+00:03:36,890 --> 00:03:38,240
+this yes's directly.
+
+42
+00:03:38,360 --> 00:03:44,720
+So you can see text you gives it a color of 2 and text sense I guess it takes a line of center just
+
+43
+00:03:44,720 --> 00:03:45,890
+like we would have written it.
+
+44
+00:03:46,240 --> 00:03:46,750
+OK.
+
+45
+00:03:46,850 --> 00:03:49,060
+Don't worry you're going to know a lot about this.
+
+46
+00:03:49,060 --> 00:03:51,630
+Yes from what as time goes on.
+
+47
+00:03:51,680 --> 00:03:54,010
+Thank you so much and see you in the next lesson.

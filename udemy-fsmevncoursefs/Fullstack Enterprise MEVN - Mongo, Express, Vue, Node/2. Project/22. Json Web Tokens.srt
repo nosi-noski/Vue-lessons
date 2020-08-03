@@ -1,0 +1,143 @@
+1
+00:00:00,720 --> 00:00:04,830
+When they use ice when you start the only thing we return is they use US data.
+
+2
+00:00:04,930 --> 00:00:09,630
+We also want to do is return on authentication token using JWT.
+
+3
+00:00:09,630 --> 00:00:13,800
+This is going to be used to authenticate the user when making for their request.
+
+4
+00:00:13,800 --> 00:00:19,080
+The first thing we need to do is install the Jason Webb tokens package
+
+5
+00:00:23,800 --> 00:00:27,370
+next in use our model.
+
+6
+00:00:27,370 --> 00:00:28,900
+We are going to import this package
+
+7
+00:00:34,700 --> 00:00:39,720
+and define an instance method on the user's schema so that we can use this method to generate a token
+
+8
+00:00:41,990 --> 00:00:48,780
+methods that generate token he's going to be a cultural function.
+
+9
+00:00:49,170 --> 00:00:56,390
+This function returns JWT that sign and will pass in the data we want to sign.
+
+10
+00:00:56,390 --> 00:01:01,580
+In this case we are just passing in the I.D. of the user.
+
+11
+00:01:01,580 --> 00:01:08,630
+And we also need to pass in on a secret and this secret is going to be the secret used to sign the token
+
+12
+00:01:09,500 --> 00:01:11,070
+in our investment vehicle.
+
+13
+00:01:11,090 --> 00:01:14,650
+Let's define a new vehicle code secret.
+
+14
+00:01:14,900 --> 00:01:21,650
+And this has to be a randomly generated string so you can even use a BCG if you want.
+
+15
+00:01:21,740 --> 00:01:25,510
+But the more random the string the more secure it is.
+
+16
+00:01:25,520 --> 00:01:32,630
+So in our config we are going to export a new config code JWT secret
+
+17
+00:01:35,500 --> 00:01:37,120
+and this is going to be process.
+
+18
+00:01:37,160 --> 00:01:44,090
+The EMV not JWT secret or one two three four
+
+19
+00:01:46,870 --> 00:01:53,540
+then we are going to pass config the JWT secret to this function.
+
+20
+00:01:53,600 --> 00:02:01,270
+So this method where we call it is going to generate a random token or adjacent web token for this user
+
+21
+00:02:01,480 --> 00:02:02,710
+and return to us.
+
+22
+00:02:02,710 --> 00:02:10,600
+So in our controller after registering a user we are going to create a token.
+
+23
+00:02:11,050 --> 00:02:20,290
+And this is going to be equal to user to generate token and the token is going to be part of the response
+
+24
+00:02:20,380 --> 00:02:23,830
+sent to the browser.
+
+25
+00:02:23,860 --> 00:02:27,700
+Now let's try to register a user in the browser.
+
+26
+00:02:27,840 --> 00:02:28,920
+I'll click and join now
+
+27
+00:02:33,260 --> 00:02:37,430
+watch our network pass in a fig user's dittos
+
+28
+00:02:42,350 --> 00:02:49,260
+and click on sign up it's loading and once it's done.
+
+29
+00:02:49,260 --> 00:02:55,830
+If you check out the response we now have a token which is a valid JWT for this user.
+
+30
+00:02:55,830 --> 00:02:59,760
+This is what is going to be used to authenticate the user father.
+
+31
+00:02:59,940 --> 00:03:01,640
+That's all I have for this lesson.
+
+32
+00:03:01,680 --> 00:03:08,280
+BIRD That's a little bug I want to fix before I close the lesson which is in the register form.
+
+33
+00:03:08,280 --> 00:03:15,270
+We have to make sure we pass type of password to this field but it's not working.
+
+34
+00:03:15,270 --> 00:03:24,630
+So in the text input we have to bind type 2 be the type prop that was passed in so that the password
+
+35
+00:03:24,630 --> 00:03:25,590
+field is hidden.
+
+36
+00:03:25,590 --> 00:03:31,530
+So if I come back to my joint now you can see that the password field is now hidden.

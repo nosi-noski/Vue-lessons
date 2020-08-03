@@ -1,0 +1,603 @@
+1
+00:00:00,810 --> 00:00:03,470
+We'll be designing this queen in this lesson.
+
+2
+00:00:03,530 --> 00:00:07,100
+But before we do that let's do some more work on this button.
+
+3
+00:00:07,100 --> 00:00:13,700
+I'm going to introduce a couple of things to you so first instead of giving this a P. one I'm going
+
+4
+00:00:13,700 --> 00:00:24,650
+to give this a p x three and a P Y off to definitely looks better than what I want is when they use
+
+5
+00:00:24,650 --> 00:00:26,330
+a whole vase over this button.
+
+6
+00:00:26,470 --> 00:00:34,470
+You should actually have a darker brown so the way you define effects with the win is 2 1/2 over a on
+
+7
+00:00:34,550 --> 00:00:38,960
+and then the stars that you want to be applied when they use a Hoovers for example.
+
+8
+00:00:39,260 --> 00:00:44,040
+Text Brown darkest should be the text.
+
+9
+00:00:44,270 --> 00:00:50,360
+So if I Hoover you can see that the text changes so I can also change the border.
+
+10
+00:00:50,390 --> 00:00:59,670
+So Hoover butter brown darkest and if I Hoover now you can see the whole thing changes.
+
+11
+00:00:59,750 --> 00:01:04,530
+Let's also make sure the logo is a link so I'm just going to change these two on a.
+
+12
+00:01:04,730 --> 00:01:13,620
+Or actually a Walton link so that it navigates recline side while chin and chew is going to be the homepage
+
+13
+00:01:15,300 --> 00:01:20,570
+and we'll say no on the line so that it's not decorated and it works.
+
+14
+00:01:20,570 --> 00:01:24,940
+Now let's go to the register peach in the register view.
+
+15
+00:01:25,020 --> 00:01:28,350
+First we're going to have a container on the container.
+
+16
+00:01:28,380 --> 00:01:31,970
+Basically restricts the width of contents.
+
+17
+00:01:32,700 --> 00:01:38,390
+So if I give a body to this container on the height so I'm just going to say with full so that it has
+
+18
+00:01:38,400 --> 00:01:41,370
+a full with then at 12:00.
+
+19
+00:01:41,770 --> 00:01:49,090
+And by brown red you can see that the container on the screen fills the whole screen.
+
+20
+00:01:49,120 --> 00:01:54,450
+But if I increase a screen you can see that the container just feels a part of the screen.
+
+21
+00:01:54,490 --> 00:02:01,290
+OK now I'm going to give this container an M X auto for my Jean Auto.
+
+22
+00:02:01,450 --> 00:02:05,110
+So that it's centralized and you can see on this screen is centralized.
+
+23
+00:02:05,230 --> 00:02:08,560
+But on smaller screens it fills the whole screen.
+
+24
+00:02:08,970 --> 00:02:09,370
+OK.
+
+25
+00:02:09,400 --> 00:02:11,880
+So that's a really good responsive container.
+
+26
+00:02:11,890 --> 00:02:15,990
+Next we're going to have this cart that we see.
+
+27
+00:02:16,000 --> 00:02:25,750
+So we're going to have this section and that is in the container so I'll quit a leave Max with small.
+
+28
+00:02:26,590 --> 00:02:30,640
+And this gives the diff a max width and you can check.
+
+29
+00:02:30,670 --> 00:02:32,680
+So when she says to see
+
+30
+00:02:35,700 --> 00:02:38,010
+what small represents that's 30 REM.
+
+31
+00:02:38,040 --> 00:02:52,180
+So Max with of 30 m m ex auto background white etched twelve so if I expand this you can see this is
+
+32
+00:02:52,180 --> 00:02:54,930
+it covering this area of the container.
+
+33
+00:02:55,090 --> 00:02:58,810
+So we are just using height and color right now to play with this.
+
+34
+00:02:58,830 --> 00:03:02,470
+Let me just give these background green so we can see better.
+
+35
+00:03:03,010 --> 00:03:04,990
+So you can see the background green there.
+
+36
+00:03:05,020 --> 00:03:14,250
+So that's our max with small probably want to try Max with extra small that's smaller.
+
+37
+00:03:14,250 --> 00:03:16,300
+So I think we're going to go with this.
+
+38
+00:03:16,320 --> 00:03:20,750
+So in this container we are going to have an each one the text center.
+
+39
+00:03:21,090 --> 00:03:24,720
+And this is going to see register OK.
+
+40
+00:03:24,810 --> 00:03:33,660
+And remember the color has to be gold based on our makeup and I think that sex is to be competitive
+
+41
+00:03:33,660 --> 00:03:34,140
+makeup.
+
+42
+00:03:34,140 --> 00:03:40,810
+So maybe we want to reduce this to edge for Yeah that's too small.
+
+43
+00:03:40,810 --> 00:03:42,310
+Let's try and edge too.
+
+44
+00:03:42,350 --> 00:03:45,820
+And if it's too big we're going to UCSF to reduce it.
+
+45
+00:03:45,820 --> 00:03:47,470
+So she thinks it's too big.
+
+46
+00:03:47,470 --> 00:03:53,350
+We're going to give this a text of large and I think that's perfect.
+
+47
+00:03:53,610 --> 00:04:03,340
+So we can also give this container a margin why of 16 so that it is a little far away from the top.
+
+48
+00:04:03,340 --> 00:04:05,600
+Now let me remove the colors and the heights.
+
+49
+00:04:05,610 --> 00:04:06,340
+We do need that.
+
+50
+00:04:06,340 --> 00:04:11,330
+I mean more and the next thing we need to do is add our quite card.
+
+51
+00:04:11,340 --> 00:04:19,780
+So after the head you're going to have a container of with for that background.
+
+52
+00:04:19,840 --> 00:04:20,880
+Right.
+
+53
+00:04:20,940 --> 00:04:26,640
+And let's just give this a choice so we can design it maybe change by quality green.
+
+54
+00:04:26,850 --> 00:04:27,260
+Yeah.
+
+55
+00:04:27,360 --> 00:04:28,380
+So that's our day.
+
+56
+00:04:28,410 --> 00:04:32,700
+So the problem is the background blends with the background of the peach.
+
+57
+00:04:32,760 --> 00:04:36,180
+So the diagram of the peach is actually not supposed to be white.
+
+58
+00:04:36,180 --> 00:04:36,570
+Right.
+
+59
+00:04:36,570 --> 00:04:42,550
+So that the background white of this element actually shows up and the background of the peach.
+
+60
+00:04:42,570 --> 00:04:45,220
+I'm going to define it in I mean that CSX.
+
+61
+00:04:45,360 --> 00:04:47,130
+So I already have defined.
+
+62
+00:04:47,130 --> 00:04:48,690
+You're just going to have it available.
+
+63
+00:04:49,050 --> 00:04:51,660
+So I'm just gonna see body and background.
+
+64
+00:04:51,660 --> 00:04:55,910
+Is this really light cream color right here.
+
+65
+00:04:56,010 --> 00:04:58,410
+So F E F the FAA.
+
+66
+00:04:58,800 --> 00:05:07,230
+So now if we come back to the register and make this background of white and give this a shadow large
+
+67
+00:05:08,190 --> 00:05:12,000
+great you can see the background of white is a little visible.
+
+68
+00:05:12,420 --> 00:05:14,570
+So maybe this should just be a shadow.
+
+69
+00:05:14,790 --> 00:05:16,470
+And that's good enough.
+
+70
+00:05:16,530 --> 00:05:22,200
+So I don't know if you can notice but a background for the body is a little different because of the
+
+71
+00:05:22,470 --> 00:05:23,540
+styling be added.
+
+72
+00:05:24,230 --> 00:05:24,870
+OK.
+
+73
+00:05:24,930 --> 00:05:30,570
+So now let's give this a margin top of five just so that it's a little way from the head.
+
+74
+00:05:30,840 --> 00:05:37,650
+And let's give this a round that class just so that it has a little nice buttery juice and the battery
+
+75
+00:05:37,660 --> 00:05:39,710
+juice looks a bit too much for me.
+
+76
+00:05:39,720 --> 00:05:42,460
+So I'm going to reduce that you assume.
+
+77
+00:05:42,990 --> 00:05:43,500
+Great.
+
+78
+00:05:43,500 --> 00:05:44,270
+So round that.
+
+79
+00:05:44,470 --> 00:05:44,820
+Awesome.
+
+80
+00:05:46,560 --> 00:05:53,650
+Ok so now in our cart we are going to have inputs.
+
+81
+00:05:54,060 --> 00:05:54,530
+OK.
+
+82
+00:05:54,540 --> 00:05:55,690
+So this is our input.
+
+83
+00:05:55,890 --> 00:06:04,680
+Let's give it a couple of classes with full force starts us and you can see that's our input right there.
+
+84
+00:06:04,780 --> 00:06:13,590
+And if we want the contents of the car to be restricted we can give it a padding so we can say p. 6
+
+85
+00:06:14,320 --> 00:06:21,520
+and if we check the input now it's centralized somehow but because of the height we put it's messed
+
+86
+00:06:21,520 --> 00:06:21,790
+up.
+
+87
+00:06:21,790 --> 00:06:26,220
+Let's move the height and now you can see it's perfectly centralized.
+
+88
+00:06:26,230 --> 00:06:32,250
+We probably want to give this p off because this like a lot of putting from the template.
+
+89
+00:06:32,350 --> 00:06:33,210
+Yes.
+
+90
+00:06:33,280 --> 00:06:37,580
+Now we are going to have some more styling for the input.
+
+91
+00:06:37,630 --> 00:06:48,400
+We're going to give this a background of Brown the lightest and that's the color of the input box in
+
+92
+00:06:48,400 --> 00:06:50,040
+our template.
+
+93
+00:06:50,050 --> 00:06:53,580
+Then we want to give this a putty so that the input is really large.
+
+94
+00:06:53,710 --> 00:06:56,070
+So p y 0 5.
+
+95
+00:06:56,380 --> 00:06:57,670
+And that's a little much.
+
+96
+00:06:57,760 --> 00:06:59,260
+Let's try three.
+
+97
+00:06:59,620 --> 00:07:01,430
+And I think that's perfect.
+
+98
+00:07:01,540 --> 00:07:08,170
+BURT We don't want this this blue border our input so we're going to see for.
+
+99
+00:07:08,410 --> 00:07:12,180
+So that's the focus date outline should be known.
+
+100
+00:07:12,250 --> 00:07:15,610
+And if I click on that you can see the outline is no bird.
+
+101
+00:07:15,790 --> 00:07:19,980
+We also don't want the text in the input tree luck.
+
+102
+00:07:19,990 --> 00:07:21,480
+We actually want it to be brown.
+
+103
+00:07:21,790 --> 00:07:30,940
+So why wouldn't you say text Brown and we also want who is zones are putting in the input like that.
+
+104
+00:07:30,940 --> 00:07:34,270
+So we probably won't actually use P 3.
+
+105
+00:07:34,300 --> 00:07:38,580
+So that each horizontal and vertical like that.
+
+106
+00:07:38,830 --> 00:07:42,540
+And then I think the text in the input such really really large.
+
+107
+00:07:42,610 --> 00:07:48,520
+So we probably want to use text small maybe try to text extra small.
+
+108
+00:07:48,940 --> 00:07:49,340
+Yeah.
+
+109
+00:07:49,380 --> 00:07:50,620
+And I think that's perfect.
+
+110
+00:07:51,910 --> 00:07:53,200
+Okay guys.
+
+111
+00:07:53,200 --> 00:07:59,430
+So now let's out of place holder to see if it actually looks like a template.
+
+112
+00:07:59,500 --> 00:08:01,600
+So enter your name.
+
+113
+00:08:01,630 --> 00:08:02,170
+Great.
+
+114
+00:08:02,170 --> 00:08:03,400
+So that's our name.
+
+115
+00:08:04,060 --> 00:08:08,910
+So you can see how easy it is to actually design this thing with tail win.
+
+116
+00:08:08,920 --> 00:08:11,470
+We are just actually writing CSX.
+
+117
+00:08:11,470 --> 00:08:12,320
+Yes.
+
+118
+00:08:12,370 --> 00:08:17,560
+So now let's duplicate the input for email and password so I'll duplicate this
+
+119
+00:08:20,850 --> 00:08:24,520
+into your email and enter your password.
+
+120
+00:08:24,720 --> 00:08:32,060
+Burt we also need a matching bottom so that they are spaced out so Margene bottom of five margin bottom
+
+121
+00:08:32,080 --> 00:08:34,010
+of five.
+
+122
+00:08:34,140 --> 00:08:34,580
+Great.
+
+123
+00:08:34,590 --> 00:08:39,080
+That's the speech we need maybe a little too much on the padding.
+
+124
+00:08:39,090 --> 00:08:45,580
+So I'm just gonna give this a party of eight and the margin shouldn't be that much modern.
+
+125
+00:08:45,630 --> 00:08:48,860
+Bottom of three should be enough.
+
+126
+00:08:49,540 --> 00:08:51,780
+And finally let's at the bottom.
+
+127
+00:08:52,530 --> 00:09:01,620
+So here I'm gonna have a button and let's give this a couple of classes with four so that it spans the
+
+128
+00:09:01,620 --> 00:09:03,130
+whole container.
+
+129
+00:09:03,210 --> 00:09:08,690
+And this is going to see sign up and let's give it a margin.
+
+130
+00:09:08,690 --> 00:09:17,180
+So Margene top off three so that it speaks and then let's give it a putting y of four and let's give
+
+131
+00:09:17,180 --> 00:09:22,550
+this a background of Emerald which is the name of a really nice blue color.
+
+132
+00:09:22,550 --> 00:09:29,060
+So why don't we give this budding white or three and it actually should be the same pattern with the
+
+133
+00:09:29,660 --> 00:09:30,880
+input boxes.
+
+134
+00:09:30,950 --> 00:09:31,800
+Right.
+
+135
+00:09:31,820 --> 00:09:39,560
+And then let's give this a text of white and let's give these around that small so that it's a little
+
+136
+00:09:39,560 --> 00:09:41,630
+rounded but not so obvious.
+
+137
+00:09:42,020 --> 00:09:46,380
+And let's remove the outline for a course outline known.
+
+138
+00:09:46,910 --> 00:09:49,310
+So if I click on that there's no outline.
+
+139
+00:09:49,580 --> 00:09:51,430
+And let's give this over states.
+
+140
+00:09:51,440 --> 00:09:57,340
+So whoever background should be Emerald lighter.
+
+141
+00:09:57,590 --> 00:10:01,300
+And if I refresh try to Hoover you can see it's light.
+
+142
+00:10:01,310 --> 00:10:05,340
+But we should actually use light instead of lighter.
+
+143
+00:10:05,430 --> 00:10:06,300
+Great.
+
+144
+00:10:06,300 --> 00:10:09,740
+So the text in the bottom looks really large.
+
+145
+00:10:11,090 --> 00:10:20,890
+So I probably wanna do text small and I think it's too large because of my enlargement but anyway.
+
+146
+00:10:20,990 --> 00:10:21,560
+That's fine.
+
+147
+00:10:22,350 --> 00:10:22,750
+OK.
+
+148
+00:10:22,850 --> 00:10:25,180
+So that's our design.
+
+149
+00:10:25,220 --> 00:10:30,050
+We have our richest touch screen completely design and just like that.
+
+150
+00:10:30,440 --> 00:10:30,760
+OK.
+
+151
+00:10:30,980 --> 00:10:34,880
+So I think that design is ready we can go ahead and use this.

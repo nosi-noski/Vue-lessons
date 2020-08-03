@@ -1,0 +1,343 @@
+1
+00:00:00,570 --> 00:00:07,520
+We agreed to handle the server side for rescinding a confirmed email to the user first only on authenticate
+
+2
+00:00:07,520 --> 00:00:09,860
+a user can ask for confirmation.
+
+3
+00:00:09,870 --> 00:00:15,390
+We sent because that's the only way we can know if the user is not confirmed.
+
+4
+00:00:15,390 --> 00:00:21,620
+So the first thing we are going to do is create a middleware to check if the user is authenticated in
+
+5
+00:00:21,620 --> 00:00:22,230
+a request.
+
+6
+00:00:22,770 --> 00:00:25,310
+I'm going to call these Me The Way of the Jess.
+
+7
+00:00:25,330 --> 00:00:29,580
+They're going to import JWT from Jason web token.
+
+8
+00:00:29,610 --> 00:00:40,860
+They're going to import the user for models and we are going to export default and a sync function would
+
+9
+00:00:40,920 --> 00:00:41,850
+have a try catch
+
+10
+00:00:47,560 --> 00:00:49,290
+on if there's any error at all.
+
+11
+00:00:49,320 --> 00:00:55,240
+We are going to return response dot statues of 400.
+
+12
+00:00:55,450 --> 00:01:02,610
+Jason with a message of on authenticated.
+
+13
+00:01:02,650 --> 00:01:06,940
+Now what are we going to do to verify they use us authentication stutters.
+
+14
+00:01:06,940 --> 00:01:11,100
+First we are going to get the token from the request.
+
+15
+00:01:11,260 --> 00:01:17,810
+We are going to check in to head us so request that headers dot assess token.
+
+16
+00:01:17,980 --> 00:01:22,930
+So if they use up is authenticated us SS token is going to be available in the header.
+
+17
+00:01:23,650 --> 00:01:28,260
+So first we're going to try to verify this token.
+
+18
+00:01:28,270 --> 00:01:38,500
+So we are going to see constant data is going to be closer JWT to verify and we'll pass in the token
+
+19
+00:01:38,690 --> 00:01:43,870
+and we also have to pass in the secrets that we used to sign all our tokens.
+
+20
+00:01:43,900 --> 00:01:45,010
+So I'm going to import
+
+21
+00:01:49,390 --> 00:01:56,740
+so would pass in config dot JWT and if JWT don't verify feels it was an error on the user receives on
+
+22
+00:01:56,770 --> 00:01:57,970
+authenticated.
+
+23
+00:01:57,970 --> 00:02:03,940
+Now we have to verify that the data in the jade Jason web token is coming from our server and to do
+
+24
+00:02:03,960 --> 00:02:04,300
+that.
+
+25
+00:02:04,300 --> 00:02:11,950
+We'll try to find a user so we user that find one or we can actually use defined by a method.
+
+26
+00:02:12,530 --> 00:02:18,700
+And this is going to be data dot IP because remember if we check how they use our model when we are
+
+27
+00:02:18,700 --> 00:02:24,970
+signing or token in the generic token method we put the idea in the payload.
+
+28
+00:02:24,970 --> 00:02:31,320
+So if the token is being sent back to us we expect the IDF in the payload to be the idea of the user.
+
+29
+00:02:31,540 --> 00:02:38,440
+Then if we successfully find a user request a user is going to be quote a user and we return next and
+
+30
+00:02:38,440 --> 00:02:39,830
+if we can't find a user.
+
+31
+00:02:39,940 --> 00:02:47,950
+So if not user then we are going to throw a new error and any other way through is going to be caught
+
+32
+00:02:47,980 --> 00:02:51,800
+by the catch block and it's going to reach us on authenticate it.
+
+33
+00:02:52,030 --> 00:02:58,660
+Okay so that's our off me to where now we need to go to our Wildstar and sets up rules for re sending
+
+34
+00:02:58,690 --> 00:03:00,370
+a confirmation email.
+
+35
+00:03:00,370 --> 00:03:10,380
+So while to that post slash emails slash re send and we will need to use our off me.
+
+36
+00:03:10,410 --> 00:03:12,440
+So I'll require it here
+
+37
+00:03:15,390 --> 00:03:20,070
+middleware slash off but I don't think we have the middleware in the ESA yet.
+
+38
+00:03:20,080 --> 00:03:21,110
+So let's check our bubble.
+
+39
+00:03:21,120 --> 00:03:22,220
+I'll see.
+
+40
+00:03:22,240 --> 00:03:22,900
+We don't.
+
+41
+00:03:22,900 --> 00:03:29,830
+So let's add that Middleware is going to point to server slash middleware.
+
+42
+00:03:30,760 --> 00:03:35,850
+Now we can use that to me the way here to protect that wallet.
+
+43
+00:03:36,190 --> 00:03:42,340
+And also we can use off controller Dauth we send confirm email.
+
+44
+00:03:42,880 --> 00:03:50,890
+So let's go to our controller and we send a confirmed email Constance recent call from email is going
+
+45
+00:03:50,890 --> 00:03:58,600
+to be a function and we'll make sure we export that function the first thing we are going to do is check
+
+46
+00:03:58,690 --> 00:04:08,710
+if requests don't use all that e-mail confirmed at all we can do if not requested I'll use that email
+
+47
+00:04:08,710 --> 00:04:14,920
+confirm that then we are going to confirm the user then if they use us email is already confirmed.
+
+48
+00:04:14,920 --> 00:04:23,210
+We are just going to return a graceful response response to Jason with a message.
+
+49
+00:04:23,230 --> 00:04:25,010
+Email confirm sent
+
+50
+00:04:28,540 --> 00:04:29,780
+just that.
+
+51
+00:04:29,890 --> 00:04:32,620
+So if they use us e-mail has not been confirmed.
+
+52
+00:04:32,620 --> 00:04:37,690
+We are going to send a confirmation but if it's us always being concerned we are just going to return
+
+53
+00:04:37,870 --> 00:04:38,680
+a 200.
+
+54
+00:04:38,710 --> 00:04:41,540
+OK so how do we confirm the user's e-mail.
+
+55
+00:04:42,370 --> 00:04:50,980
+I'm going to have a method request on user dot send e-mail confirmation and I'm going to have these
+
+56
+00:04:51,070 --> 00:04:52,240
+on the user.
+
+57
+00:04:52,240 --> 00:04:57,730
+So I'm always good to use our model to find a new method.
+
+58
+00:04:57,990 --> 00:05:04,970
+Came out that methods that send e-mail confirmation is going to be a function and dysfunction sends
+
+59
+00:05:04,990 --> 00:05:07,350
+the e-mail confirmation to the user.
+
+60
+00:05:07,540 --> 00:05:14,980
+But we already have a piece of code that sends the e-mail confirm this is it so post safe it sends this
+
+61
+00:05:15,100 --> 00:05:15,670
+e-mail.
+
+62
+00:05:15,670 --> 00:05:23,520
+What we are going to do is we are going to call these method in the send e-mail confirmation method.
+
+63
+00:05:24,640 --> 00:05:30,090
+So this is where we actually send the e-mail and then post safe.
+
+64
+00:05:30,400 --> 00:05:36,030
+We are going to call our wheat desk that sent send e-mail confirmation.
+
+65
+00:05:36,100 --> 00:05:44,260
+So after the use I received to the database this not sent e-mail confirmation is called and this method
+
+66
+00:05:45,490 --> 00:05:49,180
+sends an e-mail to confirm accounts to the user.
+
+67
+00:05:49,430 --> 00:05:55,540
+I can see we have everything we need this done e-mail this name does not name distant e-mail confirm
+
+68
+00:05:55,540 --> 00:05:56,120
+code.
+
+69
+00:05:56,420 --> 00:05:56,970
+OK.
+
+70
+00:05:57,370 --> 00:06:00,200
+So in our controller we just call that method.
+
+71
+00:06:00,220 --> 00:06:05,830
+It sends a confirmation email to the user just like it did when the user was registering.
+
+72
+00:06:05,830 --> 00:06:11,330
+Now we need to try all of this out so we'll counsel our clients.
+
+73
+00:06:11,470 --> 00:06:14,980
+This user is registered.
+
+74
+00:06:14,980 --> 00:06:17,150
+We are going to click on we sent
+
+75
+00:06:20,260 --> 00:06:28,230
+Oh I think I have to stop my server or stop my server and start it.
+
+76
+00:06:28,960 --> 00:06:30,790
+And it looks like we have an error.
+
+77
+00:06:30,820 --> 00:06:36,400
+We have a wait and re son confirm e-mail and that's because this has to be a sync function.
+
+78
+00:06:37,140 --> 00:06:37,510
+OK.
+
+79
+00:06:37,540 --> 00:06:38,540
+Sorry about that.
+
+80
+00:06:38,640 --> 00:06:42,230
+So very starts in and we're good to go.
+
+81
+00:06:43,270 --> 00:06:49,730
+Now let's refresh they use ice not confirmed if I click on to be sent.
+
+82
+00:06:49,810 --> 00:06:54,800
+We have a bad request because the user is not authenticated.
+
+83
+00:06:54,820 --> 00:07:03,180
+Now we need to put the authenticated users token in the request had us so that the user can be authenticated
+
+84
+00:07:03,600 --> 00:07:04,750
+so forced to do that.
+
+85
+00:07:04,750 --> 00:07:09,790
+We are going to have to set up exhibits to automatically add the token would do that in the very next
+
+86
+00:07:10,000 --> 00:07:10,420
+lesson.

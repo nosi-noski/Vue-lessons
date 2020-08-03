@@ -1,0 +1,171 @@
+1
+00:00:00,870 --> 00:00:08,820
+Let's install a web server so that we can serve our client side directly from our server side npm install
+
+2
+00:00:09,110 --> 00:00:12,780
+safe def where part def middleware
+
+3
+00:00:15,580 --> 00:00:21,530
+with this middleware we agreed to serve our client site and I'll show you exactly how our server indexed
+
+4
+00:00:21,530 --> 00:00:23,610
+suggests which import these middleware
+
+5
+00:00:30,210 --> 00:00:31,540
+and I'll also import Rep. Mark
+
+6
+00:00:35,140 --> 00:00:37,520
+and I'm also going to import the wetback config.
+
+7
+00:00:44,660 --> 00:00:45,970
+We'll create the compiler
+
+8
+00:00:50,720 --> 00:00:56,790
+and we do this by calling wetback with the wetback config.
+
+9
+00:00:56,790 --> 00:01:04,350
+Then we use the middleware to use my dad for me to where I will pass in the compiler.
+
+10
+00:01:04,830 --> 00:01:10,020
+And what happens is every time we launch our server the weapon gets me to where he's going to use the
+
+11
+00:01:10,020 --> 00:01:14,660
+configurations from wetback which is this compiler to launch our client site.
+
+12
+00:01:14,970 --> 00:01:17,820
+If we want NPM on Def
+
+13
+00:01:20,650 --> 00:01:23,070
+we haven't ever seen what package notifying.
+
+14
+00:01:23,080 --> 00:01:29,390
+That's because here with a capital letter and once it's compiler it you can see we have load money on
+
+15
+00:01:29,420 --> 00:01:37,570
+in here and we also have web compiling successfully which means I express over a serving with the clients
+
+16
+00:01:38,130 --> 00:01:41,470
+but for us to be able to actually view something in a browser.
+
+17
+00:01:41,590 --> 00:01:44,580
+We need to pass contributions to the Web by the way.
+
+18
+00:01:44,590 --> 00:01:49,640
+The first thing we need is actually an index that is gem of file.
+
+19
+00:01:49,670 --> 00:01:52,630
+This is going to serve as the template for our client site.
+
+20
+00:01:52,880 --> 00:01:59,970
+This is going to be called and easy in the title and here for now I'm just going to have an S-1 that
+
+21
+00:01:59,970 --> 00:02:03,520
+sees the MTV end project.
+
+22
+00:02:03,580 --> 00:02:13,680
+Next we're going to use the app there just create here in our index that is GMO so secret sauce is going
+
+23
+00:02:13,680 --> 00:02:21,000
+to be equal to the Jess so that every time weapon builds this Abdul Jess file it's going to dump the
+
+24
+00:02:21,000 --> 00:02:28,170
+contents in the after Jess and index that extra noise when you use the new version and finally in our
+
+25
+00:02:28,170 --> 00:02:35,400
+server every time the user makes a guess request to our application which is unknown to start I'm putting
+
+26
+00:02:35,400 --> 00:02:38,930
+this after I've registered all of my votes so this is a wild card.
+
+27
+00:02:38,930 --> 00:02:51,020
+Well what is going to happen is we're going to response that sent file past the resolve then the oblique
+
+28
+00:02:51,020 --> 00:02:55,150
+slash index that is Gemma lets you spot the top
+
+29
+00:02:59,850 --> 00:03:05,830
+and we are instructing Xpress to always respond with the public slash in next load estimate.
+
+30
+00:03:06,100 --> 00:03:12,190
+When the user makes a request to an unknown world and our client site is going to handle the client
+
+31
+00:03:12,190 --> 00:03:17,290
+side bouncing from its end so let's visit our application.
+
+32
+00:03:17,290 --> 00:03:22,840
+We have an error that sees response is not defined and that's because in this world we have to receive
+
+33
+00:03:22,900 --> 00:03:29,030
+requests and response objects Loman restarts web views.
+
+34
+00:03:29,130 --> 00:03:32,830
+If we refresh we have the MDA and projects.
+
+35
+00:03:32,850 --> 00:03:33,320
+Why.
+
+36
+00:03:33,330 --> 00:03:39,600
+Because Express has been instructed to respond with the index of extra Jomo Fry every time an unknown
+
+37
+00:03:39,600 --> 00:03:40,620
+world is assessed.
+
+38
+00:03:40,620 --> 00:03:42,350
+In this case the Homeworld is on.
+
+39
+00:03:42,930 --> 00:03:48,570
+If we view the beach source you can see we have the app just creeps right there which is the result
+
+40
+00:03:48,600 --> 00:03:51,510
+of wetback building the planned site assets.
+
+41
+00:03:51,510 --> 00:03:57,270
+So as we build along all of our client side assets are going to be in the apologist file and wetback
+
+42
+00:03:57,330 --> 00:04:03,670
+is going to continue putting the contents here and we agreed to view the changes in that bottom line.
+
+43
+00:04:03,690 --> 00:04:06,300
+Make sure you have this sets up now catch in in the next lesson.

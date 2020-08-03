@@ -1,0 +1,167 @@
+1
+00:00:00,300 --> 00:00:07,260
+Let's persist authentication state to local storage so that when the user refreshes the beach the user
+
+2
+00:00:07,260 --> 00:00:08,670
+is still locked in.
+
+3
+00:00:08,670 --> 00:00:16,180
+The first thing we are going to do is in our actions we are going to export a new constants on it's
+
+4
+00:00:16,260 --> 00:00:23,660
+called set off on this constant is going to be used to set authentication into mutations.
+
+5
+00:00:23,670 --> 00:00:25,260
+I'm going to import this constant
+
+6
+00:00:31,140 --> 00:00:33,140
+and defined the mutation for it.
+
+7
+00:00:33,330 --> 00:00:39,390
+First the mutation takes in state and he's going to taking a payload with the user on token.
+
+8
+00:00:39,420 --> 00:00:48,570
+And this is going to define state the user to vehicle to user and state that token to be equal to the
+
+9
+00:00:48,570 --> 00:00:50,070
+token.
+
+10
+00:00:50,100 --> 00:00:55,220
+Now we need to commit this mutation once the user successfully registers a new account.
+
+11
+00:00:55,260 --> 00:01:03,630
+So we'll go to the register that you import this constant code set off and after successful registration
+
+12
+00:01:04,200 --> 00:01:08,460
+before we do it in the user we are going to commit this mutation.
+
+13
+00:01:08,460 --> 00:01:18,610
+So this not store the comet set off and the payload we need to send to the comet is from the response
+
+14
+00:01:18,810 --> 00:01:26,370
+which we receive here and we are going to send response dot data which is the data returned from the
+
+15
+00:01:26,370 --> 00:01:27,700
+API call.
+
+16
+00:01:27,720 --> 00:01:30,660
+Now we also need to process this to local storage.
+
+17
+00:01:30,720 --> 00:01:38,760
+So we are going to call low cost of each dot set item and the name of this item is going to be off and
+
+18
+00:01:38,760 --> 00:01:46,550
+the value is going to be the string defined version of responsible data.
+
+19
+00:01:46,560 --> 00:01:48,180
+Now let's try this out.
+
+20
+00:01:48,180 --> 00:01:52,420
+I'm going to open on my dev tools and I'm going to open on my view.
+
+21
+00:01:52,490 --> 00:01:56,820
+Doors open on my view stop and let's watch the mutations.
+
+22
+00:01:56,820 --> 00:02:02,070
+I'm going to register an account.
+
+23
+00:02:03,030 --> 00:02:06,660
+Click on sign up.
+
+24
+00:02:06,890 --> 00:02:09,140
+We are redirected to the home page.
+
+25
+00:02:09,170 --> 00:02:13,400
+As you can see a new mutation code set off is committed.
+
+26
+00:02:13,400 --> 00:02:21,140
+And if we load the stage you can see that our state has a token and user objects form the API response.
+
+27
+00:02:21,170 --> 00:02:26,870
+And if we check out our application look our store which you can see we have the user key there which
+
+28
+00:02:26,870 --> 00:02:28,310
+is our data from the API.
+
+29
+00:02:28,730 --> 00:02:32,100
+But if I refresh my page local store which is persistence.
+
+30
+00:02:32,360 --> 00:02:37,640
+But the view store has been cleared and if we load the state now the author is still an empty object.
+
+31
+00:02:37,640 --> 00:02:44,240
+What we want to do is make sure that the default value or the default state of our view store is gotten
+
+32
+00:02:44,240 --> 00:02:45,560
+from local storage.
+
+33
+00:02:45,560 --> 00:02:54,850
+To do that we are going to come to our index suggests and we are going to define initial state records
+
+34
+00:02:54,890 --> 00:03:04,290
+nor then in a try catch block we are going to try to decode the data from local storage.
+
+35
+00:03:04,390 --> 00:03:12,240
+So we are going to say initial stage is equal to Jason the pass Look out storage.
+
+36
+00:03:12,730 --> 00:03:22,870
+That gets item off and if there is any ever when trying to decode these data for example the data has
+
+37
+00:03:22,870 --> 00:03:30,490
+been tampered with or there is no data at all then we are going to set initials dates to equal to an
+
+38
+00:03:30,490 --> 00:03:36,640
+empty object that has user of lower and token of law.
+
+39
+00:03:37,240 --> 00:03:41,480
+And we are going to pass initial states to the state.
+
+40
+00:03:41,620 --> 00:03:46,690
+And now if I refresh close up my Deftones open it up again
+
+41
+00:03:49,470 --> 00:03:57,350
+this in my view ex load my state you can see that the default data in the U X store is now the token
+
+42
+00:03:57,370 --> 00:04:00,410
+and the user from local story.

@@ -1,0 +1,167 @@
+1
+00:00:00,300 --> 00:00:01,510
+Welcome back.
+
+2
+00:00:01,530 --> 00:00:07,500
+In this lesson I will show you how to get the source code for all the lessons in this course.
+
+3
+00:00:07,500 --> 00:00:12,300
+This is the link to the github repository is going to be available to you when you visit the github
+
+4
+00:00:12,300 --> 00:00:13,360
+repository.
+
+5
+00:00:13,380 --> 00:00:18,930
+The first thing you want to do is click on this 41 one comments right here and here you're going to
+
+6
+00:00:18,930 --> 00:00:21,690
+see a list of all the comments I made.
+
+7
+00:00:21,960 --> 00:00:26,240
+Now each committee represents a specific lesson in the cost.
+
+8
+00:00:26,250 --> 00:00:31,880
+So if I go to order you can see we have less than 1 initialize project and install bubble.
+
+9
+00:00:31,890 --> 00:00:37,200
+When you click on this comment you would see the five changes that I made in less than one and only
+
+10
+00:00:37,200 --> 00:00:39,290
+the five changes I made in this one.
+
+11
+00:00:39,300 --> 00:00:42,080
+So here we installed a new express server.
+
+12
+00:00:42,150 --> 00:00:44,900
+We installed the packages we need two sets of bubble.
+
+13
+00:00:44,930 --> 00:00:46,740
+We also created Ababa ANSI file.
+
+14
+00:00:46,740 --> 00:00:49,460
+You can see cleanly the changes I made.
+
+15
+00:00:49,470 --> 00:00:52,680
+Now let's go back and then let's go back to NEW.
+
+16
+00:00:52,800 --> 00:00:58,560
+And maybe we want to see the changes made in less than 40 with tweaks so you can see we installed a
+
+17
+00:00:58,560 --> 00:01:04,330
+flash plugin a flash Makes in we registered the mixing.
+
+18
+00:01:04,380 --> 00:01:06,600
+You can see we flashed messages.
+
+19
+00:01:06,600 --> 00:01:09,190
+We created a flash mix in right here.
+
+20
+00:01:09,210 --> 00:01:16,400
+We also create at a flash module for the view store and all of that good stuff.
+
+21
+00:01:16,420 --> 00:01:20,560
+We also installed a package to generate one dorm I.D. for flash messages.
+
+22
+00:01:20,590 --> 00:01:23,710
+So this is exactly how you get the source code.
+
+23
+00:01:23,710 --> 00:01:27,490
+Now if you want to run the project locally you just need to clone or download.
+
+24
+00:01:27,730 --> 00:01:32,130
+And once you do that the next step is for you to create a dot entry file.
+
+25
+00:01:32,140 --> 00:01:35,740
+Now dot even referrals help us keep secrets in application.
+
+26
+00:01:35,740 --> 00:01:38,460
+Now I want you to place a dot in the file in your projects.
+
+27
+00:01:38,470 --> 00:01:44,890
+So after downloading then you're going to create a dot in the file and provide the app your oh the database
+
+28
+00:01:44,900 --> 00:01:47,940
+your oh the mail user name and the mail password.
+
+29
+00:01:47,950 --> 00:01:50,410
+So this is for M. Trump to function correctly.
+
+30
+00:01:50,470 --> 00:01:52,980
+So you can receive mail trap that Io.
+
+31
+00:01:53,050 --> 00:01:59,770
+And then once you visit M. Trump you visit back coder or sorry you visit your own accounts and then
+
+32
+00:01:59,830 --> 00:02:05,620
+you can create a new inbox where you're going to get the mail credentials so you can see my mail credentials
+
+33
+00:02:05,650 --> 00:02:06,340
+like you.
+
+34
+00:02:06,430 --> 00:02:09,720
+So once you get those you provide exactly what we have here.
+
+35
+00:02:09,730 --> 00:02:17,290
+So you provide yours not mine and you provide a JWT secret for encrypting the GW cheese from the application.
+
+36
+00:02:17,290 --> 00:02:19,980
+You also provide your database you are often the woods me.
+
+37
+00:02:20,050 --> 00:02:25,210
+Now this can be for Mongo lap or you can also provide a lucario or just like I did.
+
+38
+00:02:25,210 --> 00:02:29,680
+Now once you do that you just need to run npm install and you are good to go.
+
+39
+00:02:29,710 --> 00:02:31,650
+The project is going to run successfully.
+
+40
+00:02:32,020 --> 00:02:32,590
+All right.
+
+41
+00:02:32,800 --> 00:02:33,330
+Thank you.
+
+42
+00:02:33,370 --> 00:02:34,750
+And see you in the next lesson.

@@ -1,0 +1,287 @@
+1
+00:00:00,600 --> 00:00:03,210
+Let's display flash messages.
+
+2
+00:00:03,210 --> 00:00:05,990
+That's the final step in our client.
+
+3
+00:00:06,000 --> 00:00:08,800
+We are going to create a new flash component.
+
+4
+00:00:08,880 --> 00:00:16,170
+That view and we are going to mount this flash component in our means so that it's available on all
+
+5
+00:00:16,170 --> 00:00:16,760
+pages.
+
+6
+00:00:16,890 --> 00:00:20,500
+So in our mind a view I'll define the scripts
+
+7
+00:00:23,770 --> 00:00:31,870
+and I'm going to import flash from components I'll define it
+
+8
+00:00:35,230 --> 00:00:40,450
+as a component and I'll mounts it right at the top.
+
+9
+00:00:42,550 --> 00:00:49,540
+Now the flash component is going to have access to the view store but I'm going to have a helper in
+
+10
+00:00:49,540 --> 00:00:56,870
+my flash suggests which returns a computer at least of all messages from the view store.
+
+11
+00:00:56,870 --> 00:01:01,290
+So this is going to be called messages or let's call it flash messages.
+
+12
+00:01:01,280 --> 00:01:11,920
+So it's clear and this would return this not store that states not flash not messages which is under
+
+13
+00:01:11,960 --> 00:01:12,280
+way.
+
+14
+00:01:12,920 --> 00:01:20,390
+So in our flash crash we have to design this component and it's going to look pretty much like our e-mail
+
+15
+00:01:20,420 --> 00:01:23,390
+confirmation but with a few changes
+
+16
+00:01:26,080 --> 00:01:31,450
+the first change is the text in it the background is not going to be good light us the by going is going
+
+17
+00:01:31,450 --> 00:01:39,340
+to depend on what type it is the text is always going to be white and all of the detail is always going
+
+18
+00:01:39,340 --> 00:01:40,320
+to be centralized.
+
+19
+00:01:40,960 --> 00:01:49,610
+So first I'm going to have a DPH that wraps everything so that I can use a V4 on this element.
+
+20
+00:01:49,870 --> 00:02:01,840
+So V for message in flash messages will bind the key to be equal to message does I.D. since we know
+
+21
+00:02:01,840 --> 00:02:07,200
+it's very unique then we are going to display the message that message.
+
+22
+00:02:07,930 --> 00:02:11,320
+And we're also going to bind on classes for example.
+
+23
+00:02:11,320 --> 00:02:21,490
+Class is going to be quotes one object and the background is going to be green if the message that type
+
+24
+00:02:21,790 --> 00:02:25,210
+is equal to success.
+
+25
+00:02:25,210 --> 00:02:35,740
+And the background is going to be read Heath message not type is equal to error like that.
+
+26
+00:02:36,270 --> 00:02:36,910
+OK.
+
+27
+00:02:36,910 --> 00:02:46,390
+So our flash components mindset let's try to flash a message how signing we can actually just put this
+
+28
+00:02:46,630 --> 00:02:48,410
+flash right away for signing.
+
+29
+00:02:48,490 --> 00:02:51,300
+So we are going to go to the logging component.
+
+30
+00:02:52,030 --> 00:03:02,420
+And after a successful signing we're going to flash a message this flash signing successful.
+
+31
+00:03:02,620 --> 00:03:05,130
+Now let's try to sign in with an account
+
+32
+00:03:09,040 --> 00:03:14,890
+we can see a beautiful green message that says signing successful and after three seconds it's taken
+
+33
+00:03:14,890 --> 00:03:15,460
+the week.
+
+34
+00:03:15,480 --> 00:03:18,580
+Now there's a really strange bug in application.
+
+35
+00:03:18,590 --> 00:03:22,880
+Right now we are signed in but we can see signing on joined now here.
+
+36
+00:03:23,020 --> 00:03:25,830
+I'm going to look into this when we're done with the flush system.
+
+37
+00:03:25,960 --> 00:03:28,490
+But now if I refresh we have logout.
+
+38
+00:03:28,600 --> 00:03:32,280
+If I log out we have successfully locked out.
+
+39
+00:03:32,290 --> 00:03:36,640
+Now let's add this flash messaging on all of the actions we have.
+
+40
+00:03:36,640 --> 00:03:46,150
+So I'm going to go to the register each and after a successful registration I'm going to flash successfully
+
+41
+00:03:46,750 --> 00:03:47,440
+registered.
+
+42
+00:03:48,580 --> 00:03:51,290
+I'll also go to the e-mail confirm.
+
+43
+00:03:51,580 --> 00:04:00,300
+And if the user successfully confirms I'm going to flash a message does this e-mail confirmed.
+
+44
+00:04:00,610 --> 00:04:10,890
+But if there is an error I'm going to flash a message that says Error confirming e-mail and I'll make
+
+45
+00:04:10,890 --> 00:04:14,300
+sure that the type is error.
+
+46
+00:04:14,310 --> 00:04:17,810
+If we go to a forgot password we do exactly the same thing.
+
+47
+00:04:19,860 --> 00:04:31,190
+Who flush a message that sees password resets link sent it expires in five minutes.
+
+48
+00:04:31,200 --> 00:04:34,070
+This is very important so the user knows.
+
+49
+00:04:34,110 --> 00:04:38,490
+And then if there are any errors which display to us on the form.
+
+50
+00:04:38,650 --> 00:04:41,980
+OK so I think we've covered most of the actions.
+
+51
+00:04:42,030 --> 00:04:51,850
+Let's try to use some of those actions so we'll pass in a strange user sign up and we have successfully
+
+52
+00:04:51,850 --> 00:04:59,150
+registered and now we have a link that says Click to re send email.
+
+53
+00:04:59,160 --> 00:05:02,160
+We probably should also have a flash message for this.
+
+54
+00:05:02,220 --> 00:05:08,280
+So we agreed to come true our of mixing and this is the recent e-mail.
+
+55
+00:05:08,560 --> 00:05:13,530
+We're going to have this flash successfully.
+
+56
+00:05:13,710 --> 00:05:17,200
+We sent confirm e-mail.
+
+57
+00:05:17,660 --> 00:05:28,020
+And if there are any errors we're going to see this the flash our re sending confirm e-mail.
+
+58
+00:05:29,470 --> 00:05:29,810
+OK.
+
+59
+00:05:29,970 --> 00:05:30,660
+So let's try.
+
+60
+00:05:31,350 --> 00:05:37,490
+We click on we send e-mail and we have the message that they successfully re sent confirm e-mail.
+
+61
+00:05:37,760 --> 00:05:41,380
+But what I want is for the flash message to always be at the top.
+
+62
+00:05:41,810 --> 00:05:52,740
+So I'm going to move flash to the top OK so let's try sending the e-mail confirmation again and now
+
+63
+00:05:52,740 --> 00:05:54,640
+the message is at the top.
+
+64
+00:05:54,750 --> 00:06:01,950
+Now let's log out and try to signing or actually try to forget our password
+
+65
+00:06:04,650 --> 00:06:11,450
+and now we see the message that says it expires in five minutes and if we click on password reset click
+
+66
+00:06:11,450 --> 00:06:12,050
+on the link
+
+67
+00:06:14,780 --> 00:06:15,610
+reset password.
+
+68
+00:06:15,620 --> 00:06:21,680
+We don't have any message so let's go to reset password and flash a message.
+
+69
+00:06:21,680 --> 00:06:28,050
+This dot flash password has been reset.
+
+70
+00:06:28,070 --> 00:06:28,780
+OK.
+
+71
+00:06:28,880 --> 00:06:30,360
+So that's it for Flash.
+
+72
+00:06:30,400 --> 00:06:31,070
+Message in.

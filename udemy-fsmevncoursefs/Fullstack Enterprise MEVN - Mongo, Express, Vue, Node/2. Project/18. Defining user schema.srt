@@ -1,0 +1,195 @@
+1
+00:00:00,430 --> 00:00:05,260
+For the registration process we need to define I use our model in the server folder.
+
+2
+00:00:05,340 --> 00:00:08,880
+I'll quit on models folder on here.
+
+3
+00:00:08,880 --> 00:00:11,610
+I'll have a use other Jess first.
+
+4
+00:00:11,700 --> 00:00:14,830
+All important on this.
+
+5
+00:00:15,360 --> 00:00:17,230
+Next I'll create a user's came.
+
+6
+00:00:19,580 --> 00:00:27,600
+And this is going to be a new Mongoose that schema will pass an object and configuration for ask chemo.
+
+7
+00:00:27,600 --> 00:00:33,590
+We agreed to have a name and email a creator that to know when to use our age instead of data that in
+
+8
+00:00:33,580 --> 00:00:38,130
+case the user updates a feud like resetting the password.
+
+9
+00:00:38,130 --> 00:00:39,360
+We're going to have a password.
+
+10
+00:00:39,360 --> 00:00:44,190
+We're going to have email confirmed that to know when the user confirmed their email an email confirmed
+
+11
+00:00:44,190 --> 00:00:48,570
+code to have an activation code for the user's email.
+
+12
+00:00:48,600 --> 00:00:57,750
+Next we are going to export default a model so export Mongoose that model and the model is going to
+
+13
+00:00:57,750 --> 00:01:01,750
+be called user and this camera is going to be user US Kimo.
+
+14
+00:01:01,800 --> 00:01:05,680
+The next step is to handle creation of the user in our Controller.
+
+15
+00:01:06,120 --> 00:01:12,110
+Oh and by the way in the last lesson when we made an API request to the server we had a photo for let
+
+16
+00:01:12,150 --> 00:01:13,320
+me show you.
+
+17
+00:01:13,320 --> 00:01:14,340
+If I fill in the form
+
+18
+00:01:17,640 --> 00:01:21,750
+and click we have a 4 0 4 and the server sees this world does not exist.
+
+19
+00:01:21,810 --> 00:01:28,650
+But this world actually exits and the problem is in our auth all the vaults must always start with a
+
+20
+00:01:28,650 --> 00:01:29,740
+slash.
+
+21
+00:01:29,790 --> 00:01:36,490
+So here we also have to make sure it starts with a slash all express worlds have to start with a slash.
+
+22
+00:01:36,570 --> 00:01:42,750
+And now if we try to submit again he doesn't tell us for or for anymore it's just pending because we
+
+23
+00:01:42,750 --> 00:01:44,490
+are not handling this action yet.
+
+24
+00:01:45,060 --> 00:01:52,850
+So in our controller we need to handle the action and to undo that we need to bring in I use our model.
+
+25
+00:01:53,010 --> 00:02:02,060
+So our import user form models slash user and let's make sure the models alias exist it doesn't.
+
+26
+00:02:02,070 --> 00:02:08,670
+So we've added models is going to point to serve our slash models.
+
+27
+00:02:09,870 --> 00:02:16,440
+Here we need to register a new user and the cleanest way to do this is to actually make this and a sync
+
+28
+00:02:16,500 --> 00:02:23,540
+function so that we can always use other create and will pass in the details for this user.
+
+29
+00:02:23,730 --> 00:02:32,910
+First we'll get the name email and password from the body so we'd get name email password and this is
+
+30
+00:02:32,910 --> 00:02:36,750
+going to be the data from the client site then we are going to pass this
+
+31
+00:02:40,430 --> 00:02:42,490
+to the newly created user.
+
+32
+00:02:42,500 --> 00:02:45,340
+This promise returns towards the newly created user.
+
+33
+00:02:45,950 --> 00:02:56,240
+And we can return response with a status of 2 or 1 with adjacent that contains the newly created user.
+
+34
+00:02:56,570 --> 00:03:03,680
+At the moment we can't actually have access to request the body because our data is not yet passed to
+
+35
+00:03:03,680 --> 00:03:09,950
+be able to pass the detail we are going to install the body parts are middleware that helps us do this
+
+36
+00:03:09,980 --> 00:03:17,780
+automatically lets Reggie studies me the way we express in our index the Jess file so I'm going to import
+
+37
+00:03:17,780 --> 00:03:18,500
+body parser
+
+38
+00:03:25,350 --> 00:03:34,690
+and after reaching my express instance I'm going to use it update use body parser
+
+39
+00:03:39,250 --> 00:03:47,390
+by Jason and let's make sure our server is running it looks like it crashed so we are going to restart
+
+40
+00:03:47,390 --> 00:03:48,050
+it
+
+41
+00:03:51,450 --> 00:03:54,860
+and once that's restarted let's try to register a new user.
+
+42
+00:03:54,860 --> 00:03:58,890
+Again and we have a 2 0 1 created.
+
+43
+00:03:59,020 --> 00:04:04,490
+And if you check out the preview you can see this is the details of the newly registered user.
+
+44
+00:04:04,510 --> 00:04:08,480
+This works fine but there is two pieces of data that we are missing.
+
+45
+00:04:08,530 --> 00:04:14,740
+The first one is the fact that the password is not being hashed and this is a security failure.
+
+46
+00:04:14,770 --> 00:04:21,250
+And the second one is the fact that we don't yet set the email confront code for the user so they use
+
+47
+00:04:21,250 --> 00:04:23,250
+ice not yet able to confirm their email.
+
+48
+00:04:23,260 --> 00:04:28,690
+We also do not yet set the created app for the user and we are going to do all of these in the next
+
+49
+00:04:28,690 --> 00:04:29,100
+lesson.

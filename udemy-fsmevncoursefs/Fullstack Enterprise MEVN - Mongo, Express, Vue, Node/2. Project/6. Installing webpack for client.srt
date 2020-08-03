@@ -1,0 +1,187 @@
+1
+00:00:00,450 --> 00:00:02,830
+Not that we have the full structure of our server.
+
+2
+00:00:02,860 --> 00:00:04,520
+We have the controls on the.
+
+3
+00:00:04,690 --> 00:00:09,630
+We are going to start building or setting up our phones and with weapons.
+
+4
+00:00:10,000 --> 00:00:11,490
+So let's go ahead and install by
+
+5
+00:00:14,850 --> 00:00:16,080
+and ISO Version 4.
+
+6
+00:00:16,080 --> 00:00:18,240
+We need to also install wetbacks like
+
+7
+00:00:22,220 --> 00:00:31,050
+Next we'll create a Web site config file the first thing we're doing this far is require that EMV on
+
+8
+00:00:31,080 --> 00:00:32,780
+we'll call the config function.
+
+9
+00:00:32,820 --> 00:00:37,560
+This is so we can use environment variables in our power configuration.
+
+10
+00:00:37,770 --> 00:00:42,900
+For example when we want to know if the application is in production next number which import is the
+
+11
+00:00:42,900 --> 00:00:43,350
+path
+
+12
+00:00:46,330 --> 00:00:54,280
+our config is required to export an object and the default or the base configuration is an entry point.
+
+13
+00:00:55,380 --> 00:01:03,520
+And this is going to be client slash index digits which is going to be the base for off just application.
+
+14
+00:01:03,720 --> 00:01:11,630
+Then you're going to have an output the file name is going to be app.
+
+15
+00:01:11,710 --> 00:01:22,940
+Yes and the path is going to be path not resolve Durning server slash public.
+
+16
+00:01:23,090 --> 00:01:24,800
+That's go through these together.
+
+17
+00:01:24,810 --> 00:01:31,650
+What we want to do is we want to have a plan for the ship all of our clan code is going to leave it
+
+18
+00:01:31,660 --> 00:01:37,780
+which will have an index largesse which is the roots of our clients.
+
+19
+00:01:38,010 --> 00:01:45,570
+And when Web views our clan it's going to put the content or the output of the built into a public folder
+
+20
+00:01:45,640 --> 00:01:47,330
+in so rough order.
+
+21
+00:01:47,400 --> 00:01:53,320
+And once this is put here we are also going to build the server and have maybe a disk for that with
+
+22
+00:01:53,320 --> 00:01:57,630
+the final outputs of our project which is what we are going to run in production.
+
+23
+00:01:57,930 --> 00:01:59,870
+So let me show you how this is going to work.
+
+24
+00:02:00,060 --> 00:02:06,030
+I'll open my particular Jason which so have a script called Build clients.
+
+25
+00:02:06,030 --> 00:02:11,390
+This is going to one Web Park mode equals production.
+
+26
+00:02:11,390 --> 00:02:16,520
+Remember it's always possible mode configuration because it's required by wetback.
+
+27
+00:02:16,940 --> 00:02:25,010
+Let's also make sure I went back on forecast the mode option which I see a process that EMV not load
+
+28
+00:02:25,430 --> 00:02:28,960
+EMV or development
+
+29
+00:02:31,550 --> 00:02:37,460
+which means if the model is not defined in the node environment we should just use development by default.
+
+30
+00:02:37,460 --> 00:02:41,280
+So we have a script called build plan and this is going to run weapon.
+
+31
+00:02:41,690 --> 00:02:49,390
+So let's run this on see what we have as output NPM one viewed science
+
+32
+00:02:52,080 --> 00:02:58,100
+if we check the public folder you can see we have an update just magnified file bundled and put there
+
+33
+00:02:58,110 --> 00:02:58,830
+by wetback.
+
+34
+00:02:59,070 --> 00:03:03,170
+So when rep builds a clan it is it in the public folder.
+
+35
+00:03:03,180 --> 00:03:07,260
+Now how do we finally send this code to production.
+
+36
+00:03:07,310 --> 00:03:19,280
+We are going to have a view serve our scripts and this is going to run Babu on the server for the and
+
+37
+00:03:19,280 --> 00:03:26,070
+we configured the output directory to the disk and we'll copy all of the files that and not JavaScript
+
+38
+00:03:26,070 --> 00:03:27,500
+files.
+
+39
+00:03:27,720 --> 00:03:37,470
+So the way this looks is if we want NPM on build server it's going to build all of the javascript from
+
+40
+00:03:37,470 --> 00:03:44,480
+the server folder and place it in this list and you can see right now this uses yes 5 which is the best
+
+41
+00:03:44,480 --> 00:03:51,790
+2 1 in production and also it also copy the app which is our clients.
+
+42
+00:03:51,870 --> 00:03:55,020
+So we build a client and then we build our server.
+
+43
+00:03:55,290 --> 00:04:02,770
+So let's just have a built create which is going to do both NPM run
+
+44
+00:04:06,300 --> 00:04:08,060
+view clans and build server
+
+45
+00:04:13,910 --> 00:04:20,240
+configuration at the moment can build our clients and place it in the public folder of the server and
+
+46
+00:04:20,240 --> 00:04:25,000
+we also have a bubble script to build our server and place it in a dist folder.
+
+47
+00:04:25,010 --> 00:04:32,420
+We probably should at this to get it now in the next lesson we'll continue preparing our client site.

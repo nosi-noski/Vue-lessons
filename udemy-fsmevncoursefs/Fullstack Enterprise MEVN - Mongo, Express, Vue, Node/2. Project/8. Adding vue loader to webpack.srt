@@ -1,0 +1,179 @@
+1
+00:00:00,910 --> 00:00:07,210
+Let's add by bootloader you know that on VHS to application for wetbacks to be able to compare download
+
+2
+00:00:07,210 --> 00:00:07,770
+view files.
+
+3
+00:00:07,780 --> 00:00:13,860
+We need to view loadout for Web site to be able to compare down yes six down to iOS 5 that the boss
+
+4
+00:00:13,880 --> 00:00:15,360
+understands we need to have.
+
+5
+00:00:15,590 --> 00:00:16,720
+So npm install
+
+6
+00:00:19,960 --> 00:00:25,800
+view louder and louder to configuration load us.
+
+7
+00:00:25,820 --> 00:00:33,470
+We are going to have our module key here would have rules and there's is going to be an array of all
+
+8
+00:00:33,640 --> 00:00:43,560
+US test is going to be a regular expression for fires and in the chest and in this case we would use
+
+9
+00:00:44,190 --> 00:00:52,290
+the bubble Ludo so for all fire spending we don't just use the bubble loadout and we'll have another
+
+10
+00:00:52,290 --> 00:00:59,690
+test and this is going to be for all fires and in our view in this case we are going to use
+
+11
+00:01:02,720 --> 00:01:05,930
+the view loader for The View low that's worked properly.
+
+12
+00:01:05,930 --> 00:01:08,750
+We also need to use the view Luda blogging.
+
+13
+00:01:09,110 --> 00:01:10,610
+So we are going to require this
+
+14
+00:01:18,450 --> 00:01:26,580
+registered to plug plugin.
+
+15
+00:01:26,760 --> 00:01:35,820
+Now if we run our application NPM on death web by comparison successfully but as a package we are missing
+
+16
+00:01:35,940 --> 00:01:37,830
+unfortunately able to detect that package.
+
+17
+00:01:37,830 --> 00:01:43,100
+I want to show how required it is we are going to add a dot view file to our product.
+
+18
+00:01:43,170 --> 00:01:51,380
+So I'm going to have a page's folder here on half of me the view in my index suggests I'm going to import
+
+19
+00:01:51,390 --> 00:01:53,640
+view from view.
+
+20
+00:01:53,640 --> 00:01:54,300
+Oh that's right.
+
+21
+00:01:54,330 --> 00:02:06,620
+We haven't installed you Sol stone view npm install safe you now create a new view instance.
+
+22
+00:02:06,890 --> 00:02:15,510
+We need to pass in the elements in this case up and we need to pass a render function what is going
+
+23
+00:02:15,510 --> 00:02:22,320
+to be when that when the few instances mount that we are going to render the main component.
+
+24
+00:02:22,320 --> 00:02:31,830
+So all important main form pages slash mean that you understand the function is going to taking that
+
+25
+00:02:31,850 --> 00:02:42,090
+creates an immense function called create elements on the meat or you're going to see really popular.
+
+26
+00:02:42,090 --> 00:02:44,550
+It's simply an etch like this.
+
+27
+00:02:44,550 --> 00:02:47,580
+This basically means render the main component.
+
+28
+00:02:48,000 --> 00:02:55,430
+So we have a indexed Digest which mounts are main component and we I mean the view from another which
+
+29
+00:02:55,440 --> 00:02:56,570
+sets a wetback.
+
+30
+00:02:56,580 --> 00:03:03,650
+It's supposed to compile down the main The View and The Indexed digest and put them in a public folder.
+
+31
+00:03:03,810 --> 00:03:04,430
+Jess.
+
+32
+00:03:04,830 --> 00:03:05,610
+Let's try this out.
+
+33
+00:03:06,570 --> 00:03:16,530
+NPM one def and we have an error and this is the reason why I let this happen because I want you to
+
+34
+00:03:16,530 --> 00:03:20,260
+be able to read through the errors and detect exactly what you do.
+
+35
+00:03:20,340 --> 00:03:26,220
+For example in this case I specifically left out the package called view template compiler which is
+
+36
+00:03:26,250 --> 00:03:28,610
+a peer dependency for the view Luda.
+
+37
+00:03:28,770 --> 00:03:33,930
+So after reading this I want understanding exactly why weapon is really.
+
+38
+00:03:33,990 --> 00:03:43,830
+I know I have to install the view template compiler not I have this installed everything should be fine.
+
+39
+00:03:43,970 --> 00:03:51,800
+So NPM on Def serve us at that successfully and wetbacks successfully compound in our main let's add
+
+40
+00:03:51,800 --> 00:03:53,590
+a template here.
+
+41
+00:03:53,650 --> 00:04:01,270
+I'll have an etch one that sees the main components and in our public indexed with Eskimo instead of
+
+42
+00:04:01,270 --> 00:04:08,530
+having this patch one we're going to have a diff with ideas of how and when this javascript is low that
+
+43
+00:04:08,830 --> 00:04:15,730
+is going to Molins or render the main component on the element with idea of just like we describe.
+
+44
+00:04:16,210 --> 00:04:23,560
+So now if we visit local voice for three thousand upvotes so you can see we have the main component
+
+45
+00:04:23,890 --> 00:04:28,900
+and just like that we are successfully loading view Jess from our server site.
