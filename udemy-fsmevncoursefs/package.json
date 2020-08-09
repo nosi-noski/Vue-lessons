@@ -14,11 +14,21 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "dotenv": "^8.2.0",
-        "express": "^4.17.1",
-        "mongoose": "^5.9.27",
+        "@fullstackjs/mail": "^1.0.7",
+        "axios": "^0.18.0",
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.19.0",
+        "dotenv": "^7.0.0",
+        "express": "^4.16.4",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^5.4.20",
+        "randomstring": "^1.1.5",
+        "uuid": "^3.3.2",
         "vee-validate": "^2.2.0",
-        "vue-router": "^3.4.0"
+        "vue": "^2.6.10",
+        "vue-router": "^3.0.2",
+        "vuex": "^3.1.0",
+        "yup": "^0.27.0"
     },
     "devDependencies": {
         "@babel/cli": "^7.10.5",

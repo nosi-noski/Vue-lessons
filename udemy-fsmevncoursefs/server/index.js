@@ -1,6 +1,7 @@
 // import dotenv from 'dotenv'
 import Express, { response } from 'express'
 import Mongoose from 'mongoose'
+import BodyParser from 'body-parser'
 // const express = require ('express')
 import config from '@config'
 import path from 'path'
@@ -16,12 +17,16 @@ Mongoose.connect(config.databaseUrl, {
     useUnifiedTopology: true,
 })
 const app = Express()
+
+app.use(BodyParser.json())
+
 const compiler = Webpack(WebpackConfig)
 
 app.use(WebpackDevMiddleware(compiler, {
     hot: true,
     publicPath: WebpackConfig.output.publicPath
 }))
+
 app.use(WebpackHotMiddleware(compiler))
 
 app.use(v1Router)

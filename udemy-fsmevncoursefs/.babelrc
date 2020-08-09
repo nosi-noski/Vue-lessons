@@ -2,19 +2,22 @@
     "presets": ["@babel/preset-env"],
 
     "plugins": [
-        [
-            "module-resolver",
-            {
-                "root": ["./"],
-                "alias": {
-                    "@": "./",
-                    "@pages": "./client/pages",
-                    "@components": "./client/components",
-                    "@controllers": "./server/controllers",
-                    "@config": "./server/config",
-                    "@routes": "./server/routes"
-                }
+        ["module-resolver", {
+            "root": ["./"],
+            "alias": {
+                "@": "./",
+                "@client": "./client",
+                "@server": "./server",
+                "@store": "./client/store",
+                "@pages": "./client/pages",
+                "@models": "./server/models",
+                "@config": "./server/config",
+                "@routes": "./server/routes",
+                "@middleware": "./server/middleware",
+                "@validators": "./server/validators",
+                "@components": "./client/components",
+                "@controllers": "./server/controllers"
             }
-        ]
+        }]
     ]
 }
